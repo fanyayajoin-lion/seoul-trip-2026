@@ -1,0 +1,1727 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>首爾自由行手冊</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter & Noto Sans TC -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'Noto Sans TC', 'sans-serif'],
+          },
+          colors: {
+            kr: {
+              rose: '#f43f5e',
+              indigo: '#4f46e5',
+              softblue: '#e0e7ff',
+              mint: '#10b981',
+              dark: '#0f172a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    ::-webkit-scrollbar { width: 4px; height: 4px; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .tab-active { background: #4f46e5; color: #ffffff; box-shadow: 0 4px 14px rgba(79, 70, 229, 0.3); }
+    .day-pill-active { background: #4f46e5; color: #ffffff; box-shadow: 0 2px 8px rgba(79, 70, 229, 0.25); }
+    input[type="checkbox"]:checked + div { text-decoration-color: #4f46e5; }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-800 antialiased pb-28 select-none">
+
+  <!-- Top Navigation Header -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 px-4 py-3 shadow-xs">
+    <div class="max-w-md mx-auto flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <span class="text-2xl">🇰🇷</span>
+        <div>
+          <h1 class="text-base font-bold text-slate-900 leading-tight">首爾雙人自由行隨身手冊</h1>
+          <p class="text-[11px] text-slate-500 font-medium">10/5 (一) - 10/10 (六) · 6天5夜</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-1.5">
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-100 text-emerald-800">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1 animate-pulse"></span>
+          機酒已確認
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="max-w-md mx-auto px-4 pt-3 space-y-4">
+
+    <!-- Flight & Hotel Hero Card -->
+    <div class="bg-gradient-to-br from-indigo-900 via-indigo-800 to-slate-900 text-white rounded-2xl p-4 shadow-lg relative overflow-hidden">
+      <div class="absolute -right-10 -bottom-10 w-44 h-44 bg-rose-500/20 rounded-full blur-2xl"></div>
+      
+      <div class="flex justify-between items-start mb-3 relative z-10">
+        <div>
+          <span class="text-[10px] tracking-wider uppercase bg-white/20 px-2 py-0.5 rounded text-white font-mono">Jin Air 真航空 · 中型 737-800</span>
+          <h2 class="text-lg font-bold mt-1">台中 RMQ ⇄ 首爾仁川 ICN T2</h2>
+        </div>
+        <span class="text-xs bg-rose-500 text-white font-bold px-2 py-1 rounded-lg shadow-sm">含15KG託運</span>
+      </div>
+
+      <!-- Flight Times -->
+      <div class="grid grid-cols-2 gap-2 text-xs bg-white/10 rounded-xl p-2.5 backdrop-blur-sm relative z-10 mb-3">
+        <div class="border-r border-white/15 pr-2">
+          <div class="text-slate-300 font-medium text-[11px] flex items-center gap-1">
+            <i data-lucide="plane-takeoff" class="w-3.5 h-3.5 text-sky-400"></i> 去程 10/5 (週一) <span class="font-mono text-white/80">LJ736</span>
+          </div>
+          <div class="text-base font-bold tracking-tight text-white mt-0.5 font-mono">10:40 ➔ 14:15</div>
+          <div class="text-[10px] text-slate-300">清泉崗 T1 ➔ 仁川 T2</div>
+        </div>
+        <div class="pl-2">
+          <div class="text-slate-300 font-medium text-[11px] flex items-center gap-1">
+            <i data-lucide="plane-landing" class="w-3.5 h-3.5 text-amber-400"></i> 回程 10/10 (週六) <span class="font-mono text-white/80">LJ737</span>
+          </div>
+          <div class="text-base font-bold tracking-tight text-white mt-0.5 font-mono">14:50 ➔ 16:30</div>
+          <div class="text-[10px] text-slate-300">仁川 T2 ➔ 清泉崗 T1</div>
+          <div class="text-[9px] text-slate-400 mt-0.5">航班號以電子機票為準</div>
+        </div>
+      </div>
+
+      <!-- Hotel Banner -->
+      <div class="flex items-center justify-between text-xs bg-white/10 rounded-xl p-2.5 backdrop-blur-sm relative z-10">
+        <div class="flex items-center space-x-2">
+          <div class="p-1.5 bg-indigo-500/40 rounded-lg">
+            <i data-lucide="hotel" class="w-4 h-4 text-white"></i>
+          </div>
+          <div>
+            <div class="font-bold text-white text-[13px]">INN-The City Seoul Chungmuro</div>
+            <div class="text-[11px] text-slate-300">忠武路站 3/4 號線交會 · 24㎡ 有窗大床房</div>
+          </div>
+        </div>
+        <button onclick="switchTab('tools')" class="text-[11px] bg-white text-indigo-900 font-bold px-2 py-1 rounded-md hover:bg-slate-100 transition-colors">
+          司機卡
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="flex p-1 bg-slate-200 rounded-xl text-[11px] font-semibold gap-0.5">
+      <button onclick="switchTab('itinerary')" id="nav-itinerary" class="flex-1 py-1.5 rounded-lg text-center transition-all tab-active flex flex-col items-center justify-center gap-0.5">
+        <i data-lucide="map" class="w-4 h-4"></i><span>行程</span>
+      </button>
+      <button onclick="switchTab('checklist')" id="nav-checklist" class="flex-1 py-1.5 rounded-lg text-center transition-all text-slate-600 flex flex-col items-center justify-center gap-0.5">
+        <i data-lucide="check-square" class="w-4 h-4"></i><span>行前</span>
+      </button>
+      <button onclick="switchTab('food')" id="nav-food" class="flex-1 py-1.5 rounded-lg text-center transition-all text-slate-600 flex flex-col items-center justify-center gap-0.5">
+        <i data-lucide="utensils" class="w-4 h-4"></i><span>美食</span>
+      </button>
+      <button onclick="switchTab('shop')" id="nav-shop" class="flex-1 py-1.5 rounded-lg text-center transition-all text-slate-600 flex flex-col items-center justify-center gap-0.5">
+        <i data-lucide="shopping-bag" class="w-4 h-4"></i><span>必買</span>
+      </button>
+      <button onclick="switchTab('fx')" id="nav-fx" class="flex-1 py-1.5 rounded-lg text-center transition-all text-slate-600 flex flex-col items-center justify-center gap-0.5">
+        <i data-lucide="coins" class="w-4 h-4"></i><span>匯率</span>
+      </button>
+      <button onclick="switchTab('tools')" id="nav-tools" class="flex-1 py-1.5 rounded-lg text-center transition-all text-slate-600 flex flex-col items-center justify-center gap-0.5">
+        <i data-lucide="wrench" class="w-4 h-4"></i><span>工具</span>
+      </button>
+    </div>
+
+    <!-- TAB 1: ITINERARY SECTION -->
+    <section id="section-itinerary" class="space-y-3">
+      <!-- Day Selector Pills -->
+      <div class="flex space-x-1.5 overflow-x-auto no-scrollbar py-1">
+        <button onclick="selectDay(1)" id="daybtn-1" class="day-btn px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap day-pill-active">D1 10/5 抵達＋明洞換錢採買</button>
+        <button onclick="selectDay(2)" id="daybtn-2" class="day-btn px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-white text-slate-700 border border-slate-200">D2 10/6 京東市場＋馬場洞韓牛</button>
+        <button onclick="selectDay(3)" id="daybtn-3" class="day-btn px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-white text-slate-700 border border-slate-200">D3 10/7 景福宮＋北村＋廣藏</button>
+        <button onclick="selectDay(4)" id="daybtn-4" class="day-btn px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-white text-slate-700 border border-slate-200">D4 10/8 延南洞＋弘大</button>
+        <button onclick="selectDay(5)" id="daybtn-5" class="day-btn px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-white text-slate-700 border border-slate-200">D5 10/9 聖水洞網紅美食</button>
+        <button onclick="selectDay(6)" id="daybtn-6" class="day-btn px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-white text-slate-700 border border-slate-200">D6 10/10 返台</button>
+      </div>
+
+      <!-- DAY 1 -->
+      <div id="day-content-1" class="day-panel space-y-3">
+        <div class="bg-rose-50 border-rose-500 text-rose-800 border-l-4 p-3 rounded-r-xl text-xs">
+          <p class="font-bold flex items-start gap-1"><i data-lucide="sparkles" class="w-3.5 h-3.5 shrink-0 mt-0.5"></i> <span>今日重點：順利入境、自助入住，晚上明洞一條龍：換錢 → 炒雞 → 大創 → Olive Young。</span></p><p class="mt-1 font-medium">📅 10/5 開天節補假日，機場與明洞可能比較擠；預報有短暫降雨可能，帶把傘。</p>
+        </div>
+        <div class="space-y-3 relative before:absolute before:inset-0 before:left-3.5 before:w-0.5 before:bg-slate-200">
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-indigo-600 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">14:15 抵達仁川機場 T2</span><span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded whitespace-nowrap">抓 60~75 分</span>
+              </div>
+              <p class="text-slate-600">下機出關、領行李。持 SES 的人可走自動通關閘門，<strong>但仍可能排隊</strong>；同行朋友若滿 17 歲，可在 T2 查看台灣旅客現場註冊資格。</p><p class="text-slate-600 bg-slate-50 p-2 rounded-lg text-[11px]">💳 T2 超商（GS25/CU）幫 T-Money 各儲值 20,000 韓元。機場匯率差，只換一點點交通費就好，大額留到明洞換。</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/%EC%9D%B8%EC%B2%9C%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD%20%EC%A0%9C2%EC%97%AC%EA%B0%9D%ED%84%B0%EB%AF%B8%EB%84%90" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>仁川機場 T2</a></div>
+            </div>
+          </div>
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-indigo-600 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">15:30 - 17:15 機場巴士 6015 → 飯店</span><span class="text-[10px] bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded whitespace-nowrap">直達免搬行李</span>
+              </div>
+              <p class="text-slate-600">T2 地下 1 樓客運站搭 <strong>6015</strong>（17,000 韓元），忠武路／PJ 飯店一帶下車，Naver 導航走到飯店。</p><p class="text-amber-700 bg-amber-50 p-2 rounded-lg text-[11px]">🔑 飯店是<strong>自助入住型</strong>：出發前確認已收到門禁碼與入住說明。</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/%EC%9D%B8%EC%B2%9C%EA%B3%B5%ED%95%AD%20%EC%A0%9C2%EC%97%AC%EA%B0%9D%ED%84%B0%EB%AF%B8%EB%84%90%206015" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>6015 巴士站 T2</a><a href="https://map.naver.com/p/search/%EC%9D%B8%EB%8D%94%EC%8B%9C%ED%8B%B0%20%EC%84%9C%EC%9A%B8%20%EC%B6%A9%EB%AC%B4%EB%A1%9C" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>飯店</a></div>
+            </div>
+          </div>
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-amber-500 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">17:45 - 18:30 明洞大使館換錢所</span><span class="text-[10px] bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded whitespace-nowrap">先換錢</span>
+              </div>
+              <p class="text-slate-600">明洞中國大使館旁的換錢所，匯率在明洞數一數二。<strong>帶台幣千元大鈔</strong>＋護照，換整趟要用的現金。</p><p class="text-amber-700 bg-amber-50 p-2 rounded-lg text-[11px]">⏰ 換錢所傍晚就可能關門，所以排在晚餐前先換。到了先比較隔壁幾家的牌價（看板上 TWD 那一欄）。</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/%EB%AA%85%EB%8F%99%20%EB%8C%80%EC%82%AC%EA%B4%80%20%ED%99%98%EC%A0%84%EC%86%8C" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>明洞大使館換錢所</a></div>
+            </div>
+          </div>
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-rose-500 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">18:30 - 19:30 晚餐：春川辣炒雞</span><span class="text-[10px] bg-rose-100 text-rose-700 font-bold px-2 py-0.5 rounded whitespace-nowrap">美食 1/5</span>
+              </div>
+              <p class="text-slate-600"><strong>匠人辣炒雞（明洞店）</strong>或<strong>柳氏家</strong>，就在明洞，走路到。</p><p class="text-amber-700 bg-amber-50 p-2 rounded-lg text-[11px]">💡 必點起司炒雞，尾聲加點飛魚卵炒飯。</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/%EC%9E%A5%EC%9D%B8%EB%8B%AD%EA%B0%88%EB%B9%84%20%EB%AA%85%EB%8F%99%EC%A0%90" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>匠人辣炒雞</a><a href="https://map.naver.com/p/search/%EC%9C%A0%EA%B0%80%EB%84%A4%EB%8B%AD%EA%B0%88%EB%B9%84%20%EB%AA%85%EB%8F%99" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>柳氏家</a></div>
+            </div>
+          </div>
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-indigo-600 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">19:30 - 20:30 大創 Daiso 明洞站店（12 層樓）</span><span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded whitespace-nowrap">從頂樓往下逛</span>
+              </div>
+              <p class="text-slate-600">整棟 12 層都是大創。<strong>搭電梯直上頂樓，再走樓梯一層層往下逛</strong>，最省力。</p><p class="text-slate-600 bg-slate-50 p-2 rounded-lg text-[11px]">🛒 東西便宜很容易失心瘋，留意託運重量。</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/%EB%8B%A4%EC%9D%B4%EC%86%8C%20%EB%AA%85%EB%8F%99%EC%97%AD%EC%A0%90" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>Daiso 明洞站店</a></div>
+            </div>
+          </div>
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-indigo-600 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">20:30 - 22:00 Olive Young 明洞 Town ＋ EPT</span><span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded whitespace-nowrap">OY 營業至 22:30</span>
+              </div>
+              <p class="text-slate-600">Olive Young 逛到 22:00 左右，滿 15,000 韓元出示護照即時退稅。</p><p class="text-amber-700 bg-amber-50 p-2 rounded-lg text-[11px]">👟 <strong>EPT</strong>：出發前用 Naver 確認明洞有沒有門市與營業時間；若只有聖水店，就移到 D5 一起逛。</p><p class="text-slate-600 bg-slate-50 p-2 rounded-lg text-[11px]">✈️ 若班機或入境延誤：Olive Young／EPT 可移到 D3 晚上（明洞就在飯店旁）。</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81%20%EB%AA%85%EB%8F%99%ED%83%80%EC%9A%B4" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>Olive Young 明洞 Town</a><a href="https://map.naver.com/p/search/ept%20%EB%AA%85%EB%8F%99" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>EPT 明洞</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DAY 2 -->
+      <div id="day-content-2" class="day-panel space-y-3 hidden">
+        <div class="bg-amber-50 border-amber-500 text-amber-900 border-l-4 p-3 rounded-r-xl text-xs">
+          <p class="font-bold flex items-start gap-1"><i data-lucide="beef" class="w-3.5 h-3.5 shrink-0 mt-0.5"></i> <span>今天是「東邊吃貨日」：京東市場 → 馬場洞韓牛午餐 → 回飯店休息 → 首爾塔夕陽 → 醬蟹晚餐。</span></p><p class="mt-1 font-medium">📌 景福宮每週二公休，所以今天不排宮殿，全部移到 D3。</p>
+        </div>
+        <div class="space-y-3 relative before:absolute before:inset-0 before:left-3.5 before:w-0.5 before:bg-slate-200">
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-indigo-600 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">10:00 - 12:00 京東市場＋星巴克京東 1960</span><span class="text-[10px] bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded whitespace-nowrap">市場散步</span>
+              </div>
+              <p class="text-slate-600">忠武路搭 4 號線到東大門，轉 1 號線到「祭基洞站」（約 30 分）。韓國最大的藥材、乾貨、蔬果傳統市場，很有在地感。</p><p class="text-amber-700 bg-amber-50 p-2 rounded-lg text-[11px]">☕ 必去<strong>星巴克京東 1960</strong>：開在市場裡的老戲院改建，挑高階梯座位超好拍。</p><p class="text-slate-600 bg-slate-50 p-2 rounded-lg text-[11px]">🛍️ 紅棗、蜂蜜、人蔘片這類乾貨比觀光區便宜，可順手買伴手禮（記得看行李重量）。</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/%EA%B2%BD%EB%8F%99%EC%8B%9C%EC%9E%A5" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>京東市場</a><a href="https://map.naver.com/p/search/%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4%20%EA%B2%BD%EB%8F%991960%EC%A0%90" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>星巴克京東1960</a></div>
+            </div>
+          </div>
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-rose-500 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">12:30 - 14:30 午餐：馬場洞韓牛</span><span class="text-[10px] bg-rose-100 text-rose-700 font-bold px-2 py-0.5 rounded whitespace-nowrap">美食 5/5 韓牛</span>
+              </div>
+              <p class="text-slate-600">京東市場叫計程車約 10～15 分鐘到「馬場洞畜產市場」。</p><p class="text-slate-600 bg-slate-50 p-2 rounded-lg text-[11px]">🥩 <strong>怎麼吃（白話版）</strong>：①先在肉舖<strong>買生肉</strong>（看部位、秤重付錢）②店家會帶你去合作的餐廳 ③餐廳收「桌位費」（韓文 상차림，含小菜、生菜、炭火）幫你烤。<br>兩人建議買 400～600 克，招牌部位：<strong>등심 沙朗</strong>、<strong>갈비살 牛小排肉</strong>、<strong>육회 生牛肉</strong>。</p><p class="text-amber-700 bg-amber-50 p-2 rounded-lg text-[11px]">💡 價格先問清楚「1 公斤多少錢」，用匯率分頁換算再決定。</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/%EB%A7%88%EC%9E%A5%EC%B6%95%EC%82%B0%EB%AC%BC%EC%8B%9C%EC%9E%A5" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>馬場洞畜產市場</a></div>
+            </div>
+          </div>
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-indigo-600 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">14:30 - 16:15 回飯店休息</span><span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded whitespace-nowrap">充電</span>
+              </div>
+              <p class="text-slate-600">5 號線馬場站 → 東大門歷史文化公園站轉 4 號線 → 忠武路。午覺、充電，準備晚上的行程。</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/%EC%9D%B8%EB%8D%94%EC%8B%9C%ED%8B%B0%20%EC%84%9C%EC%9A%B8%20%EC%B6%A9%EB%AC%B4%EB%A1%9C" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>飯店</a></div>
+            </div>
+          </div>
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-indigo-600 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">16:30 - 19:00 南山首爾塔夕陽＋夜景</span><span class="text-[10px] bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded whitespace-nowrap">日落約 18:08</span>
+              </div>
+              <p class="text-slate-600">16:30 從忠武路搭 <strong>01A／01B 循環公車</strong>上山，約 17:00 到，剛好看夕陽轉夜景。觀景台平日營業至 22:30。下山搭纜車接明洞。</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/N%EC%84%9C%EC%9A%B8%ED%83%80%EC%9B%8C" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>N首爾塔</a><a href="https://map.naver.com/p/search/%EC%B6%A9%EB%AC%B4%EB%A1%9C%EC%97%AD%2001A" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>01A/01B 公車站 忠武路</a><a href="https://map.naver.com/p/search/%EB%82%A8%EC%82%B0%EC%BC%80%EC%9D%B4%EB%B8%94%EC%B9%B4" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>南山纜車</a></div>
+            </div>
+          </div>
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-rose-500 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">19:30 晚餐：生醃醬蟹</span><span class="text-[10px] bg-rose-100 text-rose-700 font-bold px-2 py-0.5 rounded whitespace-nowrap">美食 2/5</span>
+              </div>
+              <p class="text-slate-600"><strong>烏達里家 Odarijip（明洞）</strong>，營業到 23:00，下山走過去剛好。</p><p class="text-amber-700 bg-amber-50 p-2 rounded-lg text-[11px]">📞 官網表示 18:00 前可預約保留座位；晚上若沒辦法預約，可能要稍微排隊。中午吃了很多牛，醬蟹兩人點一份分著吃就好。</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/%EC%98%A4%EB%8B%A4%EB%A6%AC%EC%A7%91%20%EB%AA%85%EB%8F%99" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>烏達里家醬蟹</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DAY 3 -->
+      <div id="day-content-3" class="day-panel space-y-3 hidden">
+        <div class="bg-emerald-50 border-emerald-500 text-emerald-900 border-l-4 p-3 rounded-r-xl text-xs">
+          <p class="font-bold flex items-start gap-1"><i data-lucide="check-circle" class="w-3.5 h-3.5 shrink-0 mt-0.5"></i> <span>北村＋景福宮同一區，一起走最順。穿韓服逛宮殿免門票，10:00 看守門將換崗。</span></p><p class="mt-1 font-medium">📢 勤政殿月台 9/2～10/31 限制進入，宮殿照常開放，只影響部分近距離拍照。</p>
+        </div>
+        <div class="space-y-3 relative before:absolute before:inset-0 before:left-3.5 before:w-0.5 before:bg-slate-200">
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-indigo-600 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">08:30 安國站韓服換裝</span><span class="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded whitespace-nowrap">租 4 小時</span>
+              </div>
+              <p class="text-slate-600">忠武路搭 3 號線 3 站到「安國站」，在站附近的韓服店換裝（先預約）。選 4 小時方案，問清楚歸還時間與超時費。</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/%EC%95%88%EA%B5%AD%EC%97%AD" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>安國站</a></div>
+            </div>
+          </div>
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-indigo-600 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">09:30 - 11:30 景福宮＋守門將換崗</span><span class="text-[10px] bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded whitespace-nowrap">10:00 換崗</span>
+              </div>
+              <p class="text-slate-600">從安國站走到景福宮約 10 分鐘。10:00 光化門看換崗，10:20～11:30 逛宮殿、拍韓服照。</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/%EA%B2%BD%EB%B3%B5%EA%B6%81" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>景福宮</a></div>
+            </div>
+          </div>
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-indigo-600 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">11:30 - 12:30 三清洞 → 北村韓屋村</span><span class="text-[10px] bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded whitespace-nowrap">穿韓服拍照</span>
+              </div>
+              <p class="text-slate-600">從景福宮東側走三清洞街，一路逛到北村韓屋村，穿著韓服拍照最好看。北村是住宅區，請<strong>小聲拍照</strong>，部分區域傍晚後禁止觀光客進入。</p><p class="text-slate-600 bg-slate-50 p-2 rounded-lg text-[11px]">12:30 回安國站還韓服。</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/%EC%82%BC%EC%B2%AD%EB%8F%99%EA%B8%B8" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>三清洞</a><a href="https://map.naver.com/p/search/%EB%B6%81%EC%B4%8C%ED%95%9C%EC%98%A5%EB%A7%88%EC%9D%84" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>北村韓屋村</a></div>
+            </div>
+          </div>
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-rose-500 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">12:45 - 14:00 午餐：安國站一帶</span><span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded whitespace-nowrap">二選一</span>
+              </div>
+              <p class="text-slate-600">A. <strong>London Bagel Museum 安國店</strong>（用手機 App 登記候位，排隊很久）<br>B. <strong>土俗村蔘雞湯</strong>（計程車約 5 分；排隊超過 30 分鐘就放棄）</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/%EB%9F%B0%EB%8D%98%EB%B2%A0%EC%9D%B4%EA%B8%80%EB%AE%A4%EC%A7%80%EC%97%84%20%EC%95%88%EA%B5%AD%EC%A0%90" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>London Bagel Museum</a><a href="https://map.naver.com/p/search/%ED%86%A0%EC%86%8D%EC%B4%8C%EC%82%BC%EA%B3%84%ED%83%95" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>土俗村蔘雞湯</a></div>
+            </div>
+          </div>
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-rose-500 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">14:30 - 15:45 廣藏市場：生章魚＋生牛肉</span><span class="text-[10px] bg-rose-100 text-rose-700 font-bold px-2 py-0.5 rounded whitespace-nowrap">美食 3/5</span>
+              </div>
+              <p class="text-slate-600">安國搭計程車約 10 分到鐘路五街。<strong>只點小份</strong>，再來一份麻藥飯捲。</p><p class="text-rose-700 bg-rose-50 p-2 rounded-lg text-[11px]">⚠️ 活章魚吸盤可能黏住喉嚨：請店家切小塊、充分咀嚼，<strong>喝酒後不要吃</strong>。</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/%EA%B4%91%EC%9E%A5%EC%8B%9C%EC%9E%A5" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>廣藏市場</a><a href="https://map.naver.com/p/search/%EB%B6%80%EC%B4%8C%EC%9C%A1%ED%9A%8C" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>富村生牛肉</a></div>
+            </div>
+          </div>
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-amber-500 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">15:45 - 16:30 유성약국（廣藏藥局）</span><span class="text-[10px] bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded whitespace-nowrap">營業 08:00-19:00</span>
+              </div>
+              <p class="text-slate-600">就在廣藏市場旁邊，吃完走過去就到。網友推薦的廣藏市場藥局，可順便比價藥妝、保養品。</p><p class="text-slate-600 bg-slate-50 p-2 rounded-lg text-[11px]">📍 서울 종로구 동호로 408 1층 유성약국<br>📞 <a href="tel:050714719667" class="text-indigo-600 underline">0507-1471-9667</a></p><p class="text-amber-700 bg-amber-50 p-2 rounded-lg text-[11px]">💡 跟 D4 오프약국比價：想買的東西先拍下價格，兩邊比完再決定在哪買、湊退稅。</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EB%8F%99%ED%98%B8%EB%A1%9C%20408" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>유성약국 廣藏</a></div>
+            </div>
+          </div>
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-amber-500 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">16:45 - 17:30 OWM 藥局：免費測肌膚</span><span class="text-[10px] bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded whitespace-nowrap">依門市位置調整</span>
+              </div>
+              <p class="text-slate-600">免費膚質檢測，再依結果買保養品。</p><p class="text-amber-700 bg-amber-50 p-2 rounded-lg text-[11px]">📍 出發前用 Naver 確認門市在哪、營業時間、需不需要預約。若在明洞，就改成晚上回飯店前去。</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/OWM%20%EC%95%BD%EA%B5%AD" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>OWM 藥局</a></div>
+            </div>
+          </div>
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-rose-500 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">18:00 DDP 夜景 → 19:00 炸雞</span><span class="text-[10px] bg-rose-100 text-rose-700 font-bold px-2 py-0.5 rounded whitespace-nowrap">美食 4/5</span>
+              </div>
+              <p class="text-slate-600">東大門 DDP 太空船建築夜景。19:00 看肚子決定<strong>橋村炸雞</strong>內用或外帶回飯店。4 號線 2 站回忠武路。</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/%EB%8F%99%EB%8C%80%EB%AC%B8%EB%94%94%EC%9E%90%EC%9D%B8%ED%94%8C%EB%9D%BC%EC%9E%90" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>DDP</a><a href="https://map.naver.com/p/search/%EA%B5%90%EC%B4%8C%EC%B9%98%ED%82%A8%20%EB%8F%99%EB%8C%80%EB%AC%B8" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>橋村炸雞</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DAY 4 -->
+      <div id="day-content-4" class="day-panel space-y-3 hidden">
+        <div class="bg-indigo-50 border-indigo-500 text-indigo-900 border-l-4 p-3 rounded-r-xl text-xs">
+          <p class="font-bold flex items-start gap-1"><i data-lucide="music" class="w-3.5 h-3.5 shrink-0 mt-0.5"></i> <span>延南洞＋弘大：文青散步、韓式中華午餐、弘大逛街看街頭表演。</span></p><p class="mt-1 font-medium">🍜 燒烤已經改到 D2 馬場洞韓牛，今天午餐換成延南洞特色「韓式中華料理」。</p>
+        </div>
+        <div class="space-y-3 relative before:absolute before:inset-0 before:left-3.5 before:w-0.5 before:bg-slate-200">
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-indigo-600 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">10:30 - 12:30 延南洞京義線林道</span><span class="text-[10px] bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded whitespace-nowrap">2號線直達弘大入口</span>
+              </div>
+              <p class="text-slate-600">飯店走到「乙支路 4 街站」，搭 2 號線直達「弘大入口站」3 號出口（約 15 分）。沿著鐵道公園散步，逛選品店、喝咖啡。</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/%EA%B2%BD%EC%9D%98%EC%84%A0%EC%88%B2%EA%B8%B8%20%EC%97%B0%EB%82%A8%EB%8F%99" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>京義線林道</a></div>
+            </div>
+          </div>
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-rose-500 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">12:30 - 13:30 午餐：延南洞韓式中華料理</span><span class="text-[10px] bg-rose-100 text-rose-700 font-bold px-2 py-0.5 rounded whitespace-nowrap">炸醬麵＋糖醋肉</span>
+              </div>
+              <p class="text-slate-600">延南洞以前是華僑聚集區，有很多老字號中華料理。韓式<strong>炸醬麵（짜장면）</strong>、<strong>糖醋肉（탕수육）</strong>、<strong>煎餃（군만두）</strong>是經典三寶，跟台灣口味完全不同。</p><p class="text-slate-600 bg-slate-50 p-2 rounded-lg text-[11px]">📍 推薦搜尋「향미」（向美，煎餃有名）。出發前一天用 Naver 確認營業狀況與排隊情形。</p><p class="text-amber-700 bg-amber-50 p-2 rounded-lg text-[11px]">🔁 備案：<strong>部隊鍋（부대찌개）</strong>，弘大很多家，辣湯配泡麵、起司、火腿，下雨天特別適合。</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/%ED%96%A5%EB%AF%B8%20%EC%97%B0%EB%82%A8%EB%8F%99" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>向美 향미</a><a href="https://map.naver.com/p/search/%EC%97%B0%EB%82%A8%EB%8F%99%20%EC%A4%91%EC%8B%9D" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>延南洞 中華料理</a><a href="https://map.naver.com/p/search/%ED%99%8D%EB%8C%80%20%EB%B6%80%EB%8C%80%EC%B0%8C%EA%B0%9C" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>弘大 部隊鍋</a></div>
+            </div>
+          </div>
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-amber-500 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">13:45 - 14:45 오프약국（OFF 藥局）藥妝比價</span><span class="text-[10px] bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded whitespace-nowrap">比價最便宜</span>
+              </div>
+              <p class="text-slate-600">從延南洞走路約 15 分鐘到弘大。開放式陳列，維他命、益生菌、保養品都有，很多商品貼折扣標籤，<strong>現場直接退稅</strong>（記得帶護照）。</p><p class="text-slate-600 bg-slate-50 p-2 rounded-lg text-[11px]">📍 서울 마포구 와우산로23길 41 1층 101호<br>（Seoul, Mapo-gu, Wausan-ro 23-gil 41, 1F 101）</p><p class="text-amber-700 bg-amber-50 p-2 rounded-lg text-[11px]">💡 網友三家比價後這家最便宜，例如淡斑霜。想買的藥妝可以留到這裡一起買。</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%99%80%EC%9A%B0%EC%82%B0%EB%A1%9C23%EA%B8%B8%2041" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>오프약국 弘大</a></div>
+            </div>
+          </div>
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-indigo-600 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">14:45 - 18:00 弘大街區＋街頭表演</span><span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded whitespace-nowrap">人生四格</span>
+              </div>
+              <p class="text-slate-600">逛服飾、Kakao Friends、拍人生四格，傍晚在弘大步行街看街頭舞團。晚上輕食就好，搭 2 號線回乙支路 4 街站。</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/%ED%99%8D%EB%8C%80%20%EA%B1%B7%EA%B3%A0%EC%8B%B6%EC%9D%80%EA%B1%B0%EB%A6%AC" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>弘大步行街</a><a href="https://map.naver.com/p/search/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%94%84%EB%A0%8C%EC%A6%88%20%ED%99%8D%EB%8C%80%ED%94%8C%EB%9E%98%EA%B7%B8%EC%8B%AD%EC%8A%A4%ED%86%A0%EC%96%B4" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>Kakao Friends 弘大</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DAY 5 -->
+      <div id="day-content-5" class="day-panel space-y-3 hidden">
+        <div class="bg-amber-50 border-amber-500 text-amber-900 border-l-4 p-3 rounded-r-xl text-xs">
+          <p class="font-bold flex items-start gap-1"><i data-lucide="alert-triangle" class="w-3.5 h-3.5 shrink-0 mt-0.5"></i> <span>聖水洞網紅美食日！10/9 韓文節國定假日，人會很多，<strong>一到聖水先去無垢屋登記候位</strong>，等的時候去吃甜點。</span></p><p class="mt-1 font-medium">🚫 Dior 聖水官網目前列週四、週五休息：今天只拍外觀。甜點每家<strong>兩人分一份</strong>，才吃得完。</p>
+        </div>
+        <div class="space-y-3 relative before:absolute before:inset-0 before:left-3.5 before:w-0.5 before:bg-slate-200">
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-amber-500 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">10:30 無垢屋：先登記候位</span><span class="text-[10px] bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded whitespace-nowrap">第一站</span>
+              </div>
+              <p class="text-slate-600">搭 2 號線到「聖水站」。抵達後<strong>第一件事</strong>就是去無垢屋登記候位（或用 Catchtable／Tabling App 先排），拿到號碼再去附近吃甜點、逛街。</p><p class="text-amber-700 bg-amber-50 p-2 rounded-lg text-[11px]">📍 出發前用 Naver 確認韓文店名、營業時間與候位方式。</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/%EC%84%B1%EC%88%98%20%EB%AC%B4%EA%B5%AC%EC%98%A5" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>無垢屋</a></div>
+            </div>
+          </div>
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-rose-500 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">10:45 - 12:30 聖水甜點巡禮（等候位時）</span><span class="text-[10px] bg-rose-100 text-rose-700 font-bold px-2 py-0.5 rounded whitespace-nowrap">兩人分一份</span>
+              </div>
+              <p class="text-slate-600">依候位進度彈性調整順序：<br>☕ <strong>Onion 聖水</strong>：工廠改建咖啡廳，招牌潘多洛麵包<br>🍞 <strong>Standard Bread</strong>：人氣麵包店<br>🎨 <strong>Nudake</strong>：藝術感甜點，造型很好拍<br>🥛 <strong>Milkyshop 聖水店</strong><br>🥐 <strong>Haz Bakery</strong></p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/%EC%96%B4%EB%8B%88%EC%96%B8%20%EC%84%B1%EC%88%98" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>Onion 聖水</a><a href="https://map.naver.com/p/search/%EC%8A%A4%ED%83%A0%EB%8B%A4%EB%93%9C%EB%B8%8C%EB%A0%88%EB%93%9C%20%EC%84%B1%EC%88%98" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>Standard Bread</a><a href="https://map.naver.com/p/search/%EB%88%84%EB%8D%B0%EC%9D%B4%ED%81%AC%20%EC%84%B1%EC%88%98" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>Nudake 聖水</a><a href="https://map.naver.com/p/search/milkyshop%20%EC%84%B1%EC%88%98" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>Milkyshop</a><a href="https://map.naver.com/p/search/haz%20bakery%20%EC%84%B1%EC%88%98" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>Haz Bakery</a></div>
+            </div>
+          </div>
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-rose-500 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">12:30 - 13:30 無垢屋用餐</span><span class="text-[10px] bg-rose-100 text-rose-700 font-bold px-2 py-0.5 rounded whitespace-nowrap">叫號就回去</span>
+              </div>
+              <p class="text-slate-600">手機注意叫號，輪到就回去吃正餐。</p>
+            </div>
+          </div>
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-indigo-600 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">13:30 - 16:00 聖水逛街購物</span><span class="text-[10px] bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded whitespace-nowrap">Tamburins 11-21 點</span>
+              </div>
+              <p class="text-slate-600"><strong>Verish</strong>、<strong>Newmix</strong>、<strong>Tamburins</strong> 香氛、大林倉庫；有 EPT 門市的話也在這區逛。Dior 只拍外觀。</p><p class="text-amber-700 bg-amber-50 p-2 rounded-lg text-[11px]">🍦 下午點心：<strong>Maman Gelato 開心果冰淇淋</strong>。</p><p class="text-slate-600 bg-slate-50 p-2 rounded-lg text-[11px]">📍 Verish、Newmix、Maman Gelato 出發前用 Naver 確認門市位置。</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/verish%20%EC%84%B1%EC%88%98" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>Verish 聖水</a><a href="https://map.naver.com/p/search/newmix%20%EC%84%B1%EC%88%98" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>Newmix 聖水</a><a href="https://map.naver.com/p/search/%ED%83%AC%EB%B2%84%EB%A6%B0%EC%A6%88%20%EC%84%B1%EC%88%98" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>Tamburins 聖水</a><a href="https://map.naver.com/p/search/maman%20gelato%20%EC%84%B1%EC%88%98" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>Maman Gelato</a><a href="https://map.naver.com/p/search/%EB%94%94%EC%98%AC%20%EC%84%B1%EC%88%98" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>Dior 聖水（外觀）</a></div>
+            </div>
+          </div>
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-indigo-600 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">16:00 - 16:45 首爾林（體力有剩再去）</span><span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded whitespace-nowrap">可跳過</span>
+              </div>
+              <p class="text-slate-600">走路就到的大公園，坐著休息消化一下。累了就直接去首爾站。</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%EC%88%B2" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>首爾林</a></div>
+            </div>
+          </div>
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-amber-500 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">17:30 - 20:00 樂天超市首爾站店</span><span class="text-[10px] bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded whitespace-nowrap">營業 10:00-24:00</span>
+              </div>
+              <p class="text-slate-600">聖水搭地鐵到首爾站。固定休第二、第四個<strong>星期三</strong>，10/9 週五有開。結帳出示護照即時退稅，現場有免費紙箱膠帶。</p><p class="text-rose-700 bg-rose-50 p-2 rounded-lg text-[11px]">🚫 <strong>不要買含肉泡麵</strong>：最安全就是不買；已經帶了就<strong>主動申報</strong>。</p><p class="text-slate-600 bg-slate-50 p-2 rounded-lg text-[11px]">🦑 醃魷魚請店員真空包裝（진공포장 해 주세요），回飯店冰冰箱。📦 買完用 Kakao T 叫車回飯店。</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EB%A7%88%ED%8A%B8%20%EC%84%9C%EC%9A%B8%EC%97%AD%EC%A0%90" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>樂天超市首爾站</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DAY 6 -->
+      <div id="day-content-6" class="day-panel space-y-3 hidden">
+        <div class="bg-sky-50 border-sky-500 text-sky-900 border-l-4 p-3 rounded-r-xl text-xs">
+          <p class="font-bold flex items-start gap-1"><i data-lucide="plane" class="w-3.5 h-3.5 shrink-0 mt-0.5"></i> <span>航班 14:50 起飛（應為 LJ737，以電子機票為準）。6015 到 T2 約需 90 分鐘，還沒算週六塞車。</span></p><p class="mt-1 font-medium">🕘 <strong>最晚 09:30～09:50 搭上 6015</strong>，11:00～11:30 抵達 T2。不要再走去明洞吃早餐。</p>
+        </div>
+        <div class="space-y-3 relative before:absolute before:inset-0 before:left-3.5 before:w-0.5 before:bg-slate-200">
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-indigo-600 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">08:00 飯店附近早餐 → 09:00 退房</span><span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded whitespace-nowrap">不去明洞</span>
+              </div>
+              <p class="text-slate-600">就近吃早餐，回房拿行李、確認醃魷魚與保冷袋，09:00 退房。</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/%EC%9D%B8%EB%8D%94%EC%8B%9C%ED%8B%B0%20%EC%84%9C%EC%9A%B8%20%EC%B6%A9%EB%AC%B4%EB%A1%9C" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>飯店</a></div>
+            </div>
+          </div>
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-indigo-600 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">09:20 抵達 PJ 飯店巴士站 → 搭 6015</span><span class="text-[10px] bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded whitespace-nowrap">09:30~09:50 上車</span>
+              </div>
+              <p class="text-slate-600">搭 <strong>機場巴士 6015</strong> 往仁川機場 T2，約 90 分鐘。營運商也提醒時間會受路況影響。</p><p class="text-slate-600 bg-slate-50 p-2 rounded-lg text-[11px]">🚆 不塞車備案：4 號線 2 站到「首爾站」，轉<strong>機場快線 AREX</strong>直達仁川機場。</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/PJ%ED%98%B8%ED%85%94" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>PJ 飯店巴士站</a><a href="https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%EC%97%AD%20%EA%B3%B5%ED%95%AD%EC%B2%A0%EB%8F%84" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>首爾站 AREX</a></div>
+            </div>
+          </div>
+          <div class="relative flex items-start pl-8">
+            <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-emerald-600 ring-4 ring-white"></div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm w-full text-xs space-y-1">
+              <div class="flex justify-between items-start gap-2">
+                <span class="font-bold text-slate-900 text-sm">11:00 - 14:50 抵達 T2、報到、出境</span><span class="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded whitespace-nowrap">LJ737</span>
+              </div>
+              <p class="text-slate-600">先到<strong>免稅品提貨櫃台</strong>（有在市區免稅店買的話）→ 真航空櫃台報到託運 → 出境。SES 自動通關仍可能排隊，預留時間。14:50 起飛，16:30 抵達台中。</p>
+              <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/%EC%9D%B8%EC%B2%9C%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD%20%EC%A0%9C2%EC%97%AC%EA%B0%9D%ED%84%B0%EB%AF%B8%EB%84%90" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>仁川機場 T2</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- TAB 2: CHECKLIST SECTION -->
+    <section id="section-checklist" class="space-y-3 hidden">
+      <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm space-y-2">
+        <div class="flex justify-between items-center text-xs">
+          <span class="font-bold text-slate-700 flex items-center gap-1.5">
+            <i data-lucide="clipboard-check" class="w-4 h-4 text-indigo-600"></i> 行前準備打勾清單
+          </span>
+          <span id="checklist-progress-text" class="font-mono font-bold text-indigo-600 text-sm">0%</span>
+        </div>
+        <div class="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden">
+          <div id="checklist-progress-bar" class="bg-indigo-600 h-2.5 rounded-full transition-all duration-300" style="width: 0%"></div>
+        </div>
+        <p class="text-[11px] text-slate-400">勾選後將自動儲存於手機瀏覽器，重新整理不會遺失！</p>
+      </div>
+
+      <!-- Category 1 -->
+      <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-2.5">
+        <h3 class="text-xs font-bold text-slate-900 uppercase tracking-wider flex items-center gap-1.5 border-b pb-2">
+          <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i> 1. 證件與通關手續
+        </h3>
+        <div class="space-y-2 text-xs">
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c1" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">檢查雙人護照效期 (需滿 6 個月以上)</div>
+              <div class="text-[11px] text-slate-500">持台灣護照享 90 天免簽證待遇。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c2" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">出發前填寫「電子入境卡 e-Arrival Card」（兩人都要填）</div>
+              <div class="text-[11px] text-slate-500">線上取代紙本入境卡，入境時不需出示 QR Code；保留確認信或發行號碼即可。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c3" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">SES 自動通關：確認護照與 SES 登記資料一致</div>
+              <div class="text-[11px] text-slate-500">可走自動閘門但仍可能排隊；同行朋友若滿 17 歲，可在 T2 查看台灣旅客現場註冊資格。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c16" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">K-ETA：台灣護照 2026 年底前暫免，不用申請</div>
+              <div class="text-[11px] text-slate-500">依韓國駐台代表部公告，兩人都不需要另外申請。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c21" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">確認飯店自助入住的門禁碼與入住說明</div>
+              <div class="text-[11px] text-slate-500">INN-The City 是自助入住型，出發前確認信箱或訊息已收到。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c22" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">預約 10/6 烏達里家醬蟹（晚餐 19:30）</div>
+              <div class="text-[11px] text-slate-500">官網表示 18:00 前可預約保留座位；晚上不能訂就準備排一下。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c24" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">聖水無垢屋：下載 Catchtable／Tabling 候位 App</div>
+              <div class="text-[11px] text-slate-500">10/9 是國定假日，一到聖水先登記候位。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c25" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">用 Naver 確認 EPT、OWM 藥局、Verish、Newmix 門市位置</div>
+              <div class="text-[11px] text-slate-500">這幾家小C獅無法確認確切地址，到時候才不會白跑。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c23" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">出發前一天再確認航班號與時間（LJ736／LJ737）</div>
+              <div class="text-[11px] text-slate-500">以電子機票為準，前一天上真航空官網或 App 確認。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c17" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">核對電子機票上的航廈（T1 還是 T2）</div>
+              <div class="text-[11px] text-slate-500">韓國航空公司合併中常搬航廈；兩航廈間接駁車要 15~20 分鐘。</div>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Category 2 -->
+      <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-2.5">
+        <h3 class="text-xs font-bold text-slate-900 uppercase tracking-wider flex items-center gap-1.5 border-b pb-2">
+          <i data-lucide="wifi" class="w-4 h-4 text-sky-600"></i> 2. 通訊、交通與票券
+        </h3>
+        <div class="space-y-2 text-xs">
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c4" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">預訂韓國上網 eSIM 或實體 SIM 卡</div>
+              <div class="text-[11px] text-slate-500">推薦每日 2GB 或吃到飽方案，查地圖導航必備。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c5" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">準備 T-Money 卡或 WOWPASS 卡</div>
+              <div class="text-[11px] text-slate-500">抵達仁川 T2 機場後在超商用現金儲值 20,000 韓元。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c6" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">首爾塔展望台門票 / 韓服預約（10/7 早上 08:30）</div>
+              <div class="text-[11px] text-slate-500">線上先買展望台門票；韓服預約 08:30，問清楚歸還時間與超時費。</div>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Category 3 -->
+      <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-2.5">
+        <h3 class="text-xs font-bold text-slate-900 uppercase tracking-wider flex items-center gap-1.5 border-b pb-2">
+          <i data-lucide="smartphone" class="w-4 h-4 text-purple-600"></i> 3. 手機下載 4 大必備 APP
+        </h3>
+        <div class="space-y-2 text-xs">
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c7" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">Naver Map（繁中介面，韓國定位最強）</div>
+              <div class="text-[11px] text-slate-500">公車即時動態、地鐵線路與步行路線必備。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c8" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">Subway Korea（首爾地鐵乘車神器）</div>
+              <div class="text-[11px] text-slate-500">繁中地鐵圖，精確計算轉乘車廂與所需時間。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c9" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">Papago（韓文拍照即時翻譯）</div>
+              <div class="text-[11px] text-slate-500">菜單一拍即翻中文，用詞精準自然。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c10" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">Kakao T（韓國版 Uber 叫車 APP）</div>
+              <div class="text-[11px] text-slate-500">若採買過重，直接地圖定位叫車，信用卡直接扣款。</div>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Category 4 -->
+      <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-2.5">
+        <h3 class="text-xs font-bold text-slate-900 uppercase tracking-wider flex items-center gap-1.5 border-b pb-2">
+          <i data-lucide="wallet" class="w-4 h-4 text-amber-600"></i> 4. 財務與行李裝備
+        </h3>
+        <div class="space-y-2 text-xs">
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c11" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">台新黑狗卡 App 切換至「玩旅刷」</div>
+              <div class="text-[11px] text-slate-500">Trip.com 機加酒享 3.3% 點數回饋無上限。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c12" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">換備用韓元現金 ＆ 帶台幣千元大鈔</div>
+              <div class="text-[11px] text-slate-500">台灣先換 5,000 台幣韓元現鈔；明洞換錢所匯率更好。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c13" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">韓國 220V 圓孔轉接頭 (4.8mm)</div>
+              <div class="text-[11px] text-slate-500">自備 1~2 個；台灣扁平雙插無法直接使用。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c14" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">行動電源：只能隨身，不能託運</div>
+              <div class="text-[11px] text-slate-500">每人最多 2 顆、160Wh 以下、端子要絕緣（貼膠帶或夾鏈袋）、不可放頭頂行李櫃，機上不能使用或充電。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c15" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">投保海外旅平險＋定額延誤不便險</div>
+              <div class="text-[11px] text-slate-500">保障 10/5 ~ 10/10 期間海外突發醫療與班機行李延遲。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c18" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">上網先加購回程託運行李</div>
+              <div class="text-[11px] text-slate-500">每人 15KG 很容易被伴手禮撐爆，機場櫃檯現場加購最貴。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c19" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">不要買含肉泡麵／肉製品</div>
+              <div class="text-[11px] text-slate-500">一般人很難判斷製程，最安全就是不買；已經帶了就主動申報，不要自己猜。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c20" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">帶一件薄外套</div>
+              <div class="text-[11px] text-slate-500">10 月初首爾白天約 20 度出頭、晚上約 12~13 度，首爾塔山頂風更大。</div>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Weather & outfit -->
+      <div class="bg-gradient-to-br from-sky-50 to-indigo-50 rounded-2xl p-4 border border-sky-200 shadow-sm space-y-2 text-xs">
+        <h3 class="text-sm font-bold text-slate-900 flex items-center gap-1.5"><i data-lucide="cloud-sun" class="w-4 h-4 text-sky-600"></i> 天氣與每日穿搭</h3>
+        <p class="text-slate-600">10 月上旬首爾通常<strong>白天約 20 度出頭、早晚約 12～15 度</strong>，乾燥、早晚溫差大。原則是<strong>洋蔥式穿法</strong>（一層一層穿，熱了就脫）：短袖或薄長袖＋一件好穿脫的外套。</p>
+        <p class="text-[11px] text-sky-800 bg-white/70 p-2 rounded-lg">☁️ 以上是往年平均，<strong>出發前一天看 Naver 天氣再微調</strong>（D1 預報有短暫降雨可能）。</p>
+        <div class="space-y-1.5 pt-1">
+          <div class="flex gap-2"><span class="shrink-0 font-bold text-indigo-700 w-9">D1</span><span class="text-slate-600">搭機＋明洞逛街到晚上：舒服的長褲＋薄外套，<strong>帶折疊傘</strong>。</span></div>
+          <div class="flex gap-2"><span class="shrink-0 font-bold text-indigo-700 w-9">D2</span><span class="text-slate-600">馬場洞烤肉會沾一身味：穿<strong>深色、不怕味道</strong>的衣服；晚上首爾塔山頂風大，外套一定要帶。</span></div>
+          <div class="flex gap-2"><span class="shrink-0 font-bold text-indigo-700 w-9">D3</span><span class="text-slate-600">換韓服日：穿<strong>好穿脫的上衣＋貼身短袖或背心</strong>當內搭；頭髮好整理，可帶髮夾。北村坡多，穿好走的鞋。</span></div>
+          <div class="flex gap-2"><span class="shrink-0 font-bold text-indigo-700 w-9">D4</span><span class="text-slate-600">延南洞、弘大走很多路：休閒好走就好，拍人生四格可以穿亮色一點。</span></div>
+          <div class="flex gap-2"><span class="shrink-0 font-bold text-indigo-700 w-9">D5</span><span class="text-slate-600">聖水網紅店拍照日：穿最好看的那套；但甜點吃一整天，選不勒肚子的版型 😄</span></div>
+          <div class="flex gap-2"><span class="shrink-0 font-bold text-indigo-700 w-9">D6</span><span class="text-slate-600">回程：輕便好走，外套穿身上，行李箱留給戰利品。</span></div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-2.5">
+        <h3 class="text-xs font-bold text-slate-900 uppercase tracking-wider flex items-center gap-1.5 border-b pb-2">
+          <i data-lucide="shirt" class="w-4 h-4 text-indigo-600"></i> 5. 服裝鞋子（依天氣＋行程）
+        </h3>
+        <div class="space-y-2 text-xs">
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c26" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">薄外套 1～2 件（風衣、針織外套或防風外套）</div>
+              <div class="text-[11px] text-slate-500">早晚 12～15 度，首爾塔山頂和晚上逛街都用得到。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c27" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">短袖＋薄長袖各 3～4 件</div>
+              <div class="text-[11px] text-slate-500">洋蔥式穿法，白天熱可以只穿短袖。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c28" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">好走的鞋 2 雙（輪流穿）</div>
+              <div class="text-[11px] text-slate-500">每天走 1.5～2 萬步，北村、聖水都是走路行程；新鞋別第一次穿出國。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c29" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">一套深色、不怕燒肉味的衣服</div>
+              <div class="text-[11px] text-slate-500">D2 馬場洞韓牛。便利商店也買得到除臭噴霧。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c30" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">好穿脫的上衣＋貼身內搭、髮夾</div>
+              <div class="text-[11px] text-slate-500">D3 換韓服用。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c31" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">拍照穿搭 1 套</div>
+              <div class="text-[11px] text-slate-500">D3 韓服以外的景福宮／北村，或 D5 聖水網紅店。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c32" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">折疊傘或輕便雨衣</div>
+              <div class="text-[11px] text-slate-500">D1 預報有短暫降雨可能。</div>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-2.5">
+        <h3 class="text-xs font-bold text-slate-900 uppercase tracking-wider flex items-center gap-1.5 border-b pb-2">
+          <i data-lucide="backpack" class="w-4 h-4 text-amber-600"></i> 6. 隨身與實用小物
+        </h3>
+        <div class="space-y-2 text-xs">
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c33" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">環保購物袋 1～2 個＋可折疊的備用行李袋</div>
+              <div class="text-[11px] text-slate-500">韓國很多店不給塑膠袋；回程戰利品多可以多一袋。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c34" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">手提行李秤</div>
+              <div class="text-[11px] text-slate-500">每人託運 15KG，打包時先秤，避免機場被罰超重。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c35" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">夾鏈袋數個＋保冷袋＋冰寶</div>
+              <div class="text-[11px] text-slate-500">醃魷魚、醬料、保養品防漏；保冷袋台灣大創或超商買。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c36" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">面紙、濕紙巾</div>
+              <div class="text-[11px] text-slate-500">找廁所、吃市場小吃、烤肉後擦手都用得到。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c37" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">腸胃藥、止痛藥、OK 繃</div>
+              <div class="text-[11px] text-slate-500">這趟有生章魚、生牛肉、生醃醬蟹；走路多容易磨腳。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c38" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">保濕乳液、護唇膏</div>
+              <div class="text-[11px] text-slate-500">首爾 10 月很乾燥（不想帶也可以到 Olive Young 再買）。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c39" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">護照影本或手機存一張護照照片</div>
+              <div class="text-[11px] text-slate-500">萬一護照遺失，補辦比較快。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c40" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">充電線、充電頭、轉接頭</div>
+              <div class="text-[11px] text-slate-500">轉接頭見第 4 類；充電頭兩人可共用多孔的。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-check="c41" class="mt-0.5 w-4 h-4 rounded text-indigo-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">去程行李箱只裝一半</div>
+              <div class="text-[11px] text-slate-500">留一半空間給伴手禮和 Olive Young 戰利品。</div>
+            </div>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: FOOD SECTION -->
+    <section id="section-food" class="space-y-3 hidden">
+      <div class="bg-gradient-to-r from-rose-500 to-amber-500 p-4 rounded-2xl text-white shadow-sm">
+        <h3 class="font-bold text-sm flex items-center gap-1.5">
+          <i data-lucide="flame" class="w-4 h-4"></i> 首爾必吃美食五本柱成就卡
+        </h3>
+        <p class="text-xs text-rose-100 mt-1">您指定的 5 大美食皆已排入行程！每吃一項目即可打勾記錄！</p>
+      </div>
+
+      <!-- Food 1 -->
+      <div class="bg-white rounded-2xl p-3.5 border border-slate-200 shadow-sm space-y-2">
+        <div class="flex items-start justify-between">
+          <div class="flex items-center space-x-2">
+            <span class="text-xl">🧀</span>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">1. 春川辣炒雞（莫札瑞拉起司＋飛魚卵炒飯）</h4>
+              <p class="text-[11px] text-slate-500">安排時段：Day 1 (10/5) 晚餐</p>
+            </div>
+          </div>
+          <input type="checkbox" data-food="f1" class="w-5 h-5 rounded text-rose-600 focus:ring-0">
+        </div>
+        <p class="text-xs text-slate-600 bg-slate-50 p-2 rounded-lg leading-relaxed">
+          <strong>推薦名店：</strong>Premium Jangin Dakalbi 匠人辣炒雞 (明洞店) 或 柳氏家<br>
+          <strong>交通：</strong>明洞站 6 號或 8 號出口步行 5 分鐘。<br>
+          <strong>必吃亮點：</strong>起司熱熔如河流瀑布，炒雞肉包裹濃郁奶香，尾聲必點鐵板炒飯！
+        </p>
+      </div>
+
+      <!-- Food 2 -->
+      <div class="bg-white rounded-2xl p-3.5 border border-slate-200 shadow-sm space-y-2">
+        <div class="flex items-start justify-between">
+          <div class="flex items-center space-x-2">
+            <span class="text-xl">🦀</span>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">2. 生醃醬蟹（特級延坪島母蟹）</h4>
+              <p class="text-[11px] text-slate-500">安排時段：Day 2 (10/6) 晚餐 19:30</p>
+            </div>
+          </div>
+          <input type="checkbox" data-food="f2" class="w-5 h-5 rounded text-rose-600 focus:ring-0">
+        </div>
+        <p class="text-xs text-slate-600 bg-slate-50 p-2 rounded-lg leading-relaxed">
+          <strong>推薦名店：</strong>烏達里家 Odarijip 醬油螃蟹（明洞店）<br>
+          <strong>交通：</strong>明洞站 6 號出口步行 3 分鐘。<br>
+          <strong>必吃亮點：</strong>爆滿蟹膏擠入熱騰騰白飯，拌入麻油、飛魚卵與海苔絲，鮮甜下飯。
+        </p>
+      </div>
+
+      <!-- Food 3 -->
+      <div class="bg-white rounded-2xl p-3.5 border border-slate-200 shadow-sm space-y-2">
+        <div class="flex items-start justify-between">
+          <div class="flex items-center space-x-2">
+            <span class="text-xl">🐙</span>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">3. 廣藏市場生章魚＋生牛肉</h4>
+              <p class="text-[11px] text-slate-500">安排時段：Day 3 (10/7) 14:30（只點小份）</p>
+            </div>
+          </div>
+          <input type="checkbox" data-food="f3" class="w-5 h-5 rounded text-rose-600 focus:ring-0">
+        </div>
+        <p class="text-xs text-slate-600 bg-slate-50 p-2 rounded-lg leading-relaxed">
+          <strong>推薦名店：</strong>富村生牛肉 (米其林必比登推薦) / 順熙家綠豆煎餅<br>
+          <strong>交通：</strong>鐘路五街站 8 號出口廣藏市場內。<br>
+          <strong>必吃亮點：</strong>活章魚蠕動爽脆蘸鹽麻油超美味；生牛肉配水梨絲滑順甘甜！<br><strong class="text-rose-600">安全提醒：</strong>章魚請店家切小塊、慢慢嚼，喝酒後別吃。
+        </p>
+      </div>
+
+      <!-- Food 4 -->
+      <div class="bg-white rounded-2xl p-3.5 border border-slate-200 shadow-sm space-y-2">
+        <div class="flex items-start justify-between">
+          <div class="flex items-center space-x-2">
+            <span class="text-xl">🍗</span>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">4. 韓國炸雞（大蒜醬油＋蜂蜜脆皮）</h4>
+              <p class="text-[11px] text-slate-500">安排時段：Day 3 (10/7) 19:00 內用或外帶</p>
+            </div>
+          </div>
+          <input type="checkbox" data-food="f4" class="w-5 h-5 rounded text-rose-600 focus:ring-0">
+        </div>
+        <p class="text-xs text-slate-600 bg-slate-50 p-2 rounded-lg leading-relaxed">
+          <strong>推薦名店：</strong>橋村炸雞 Kyochon Chicken（東大門 1 號店，24 小時營業）<br>
+          <strong>交通：</strong>東大門站 6 號出口出站即達。<br>
+          <strong>必吃亮點：</strong>經典「半半炸雞」（蒜香醬油＋蜂蜜），外皮極脆，配醃蘿蔔與生啤酒絕配！
+        </p>
+      </div>
+
+      <!-- Food 5 -->
+      <div class="bg-white rounded-2xl p-3.5 border border-slate-200 shadow-sm space-y-2">
+        <div class="flex items-start justify-between">
+          <div class="flex items-center space-x-2">
+            <span class="text-xl">🥩</span>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">5. 馬場洞韓牛燒肉</h4>
+              <p class="text-[11px] text-slate-500">安排時段：Day 2 (10/6) 午餐</p>
+            </div>
+          </div>
+          <input type="checkbox" data-food="f5" class="w-5 h-5 rounded text-rose-600 focus:ring-0">
+        </div>
+        <p class="text-xs text-slate-600 bg-slate-50 p-2 rounded-lg leading-relaxed">
+          <strong>地點：</strong>馬場洞畜產市場（마장축산물시장）<br>
+          <strong>交通：</strong>5 號線馬場站；從京東市場搭計程車約 10～15 分。<br>
+          <strong>怎麼吃：</strong>先在肉舖買生肉 → 帶到合作餐廳付桌位費（상차림）烤來吃。招牌：沙朗（등심）、牛小排肉（갈비살）、生牛肉（육회）。
+        </p>
+      </div>
+
+      <!-- Bonus foods -->
+      <div class="bg-gradient-to-r from-amber-500 to-orange-500 p-4 rounded-2xl text-white shadow-sm mt-5">
+        <h3 class="font-bold text-sm flex items-center gap-1.5">
+          <i data-lucide="star" class="w-4 h-4"></i> 小C獅加碼推薦（順路版）
+        </h3>
+        <p class="text-xs text-amber-50 mt-1">都在行程附近，不用特地繞路。吃到就打勾！</p>
+      </div>
+      <div class="bg-white rounded-2xl p-3.5 border border-slate-200 shadow-sm space-y-2">
+        <div class="flex items-start justify-between">
+          <div class="flex items-center space-x-2">
+            <span class="text-xl">🐷</span>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">6. 獎忠洞豬腳</h4>
+              <p class="text-[11px] text-slate-500">建議時段：任一晚宵夜（3 號線東大入口站）</p>
+            </div>
+          </div>
+          <input type="checkbox" data-food="f6" class="w-5 h-5 rounded text-amber-600 focus:ring-0">
+        </div>
+        <p class="text-xs text-slate-600 bg-slate-50 p-2 rounded-lg leading-relaxed">
+          <strong>推薦：</strong>平安道豬腳等老字號（獎忠洞豬腳街）<br>
+          <strong>交通：</strong>忠武路搭 3 號線 1 站到「東大入口站」，出站就是豬腳街。<br>
+          <strong>必吃亮點：</strong>滷過放涼再切片，皮Q不油，用生菜包著吃，配一杯啤酒。
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-3.5 border border-slate-200 shadow-sm space-y-2">
+        <div class="flex items-start justify-between">
+          <div class="flex items-center space-x-2">
+            <span class="text-xl">🍜</span>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">7. 又來屋平壤冷麵</h4>
+              <p class="text-[11px] text-slate-500">建議時段：D6 回國前早午餐，或任一天午餐</p>
+            </div>
+          </div>
+          <input type="checkbox" data-food="f7" class="w-5 h-5 rounded text-amber-600 focus:ring-0">
+        </div>
+        <p class="text-xs text-slate-600 bg-slate-50 p-2 rounded-lg leading-relaxed">
+          <strong>推薦：</strong>又來屋 Woo Lae Oak（開業 70 多年、米其林推薦）<br>
+          <strong>交通：</strong>飯店旁乙支路 4 街，步行可達。<br>
+          <strong>必吃亮點：</strong>湯頭清淡，第三口才懂它的好；配店內烤牛肉一起吃。
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-3.5 border border-slate-200 shadow-sm space-y-2">
+        <div class="flex items-start justify-between">
+          <div class="flex items-center space-x-2">
+            <span class="text-xl">🍙</span>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">8. 廣藏市場麻藥飯捲</h4>
+              <p class="text-[11px] text-slate-500">建議時段：D3 14:30 逛廣藏市場時</p>
+            </div>
+          </div>
+          <input type="checkbox" data-food="f8" class="w-5 h-5 rounded text-amber-600 focus:ring-0">
+        </div>
+        <p class="text-xs text-slate-600 bg-slate-50 p-2 rounded-lg leading-relaxed">
+          <strong>推薦：</strong>廣藏市場內飯捲攤<br>
+          <strong>交通：</strong>鐘路五街站 8 號出口。<br>
+          <strong>必吃亮點：</strong>迷你飯捲沾芥末醬，好吃到停不下來，所以叫「麻藥」。
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-3.5 border border-slate-200 shadow-sm space-y-2">
+        <div class="flex items-start justify-between">
+          <div class="flex items-center space-x-2">
+            <span class="text-xl">🍲</span>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">9. 東大門一隻雞</h4>
+              <p class="text-[11px] text-slate-500">建議時段：D3（與橋村炸雞二選一，不然會撐）</p>
+            </div>
+          </div>
+          <input type="checkbox" data-food="f9" class="w-5 h-5 rounded text-amber-600 focus:ring-0">
+        </div>
+        <p class="text-xs text-slate-600 bg-slate-50 p-2 rounded-lg leading-relaxed">
+          <strong>推薦：</strong>陳玉華一隻雞（진옥화할매원조닭한마리）<br>
+          <strong>交通：</strong>鐘路五街站，就在廣藏市場旁邊。<br>
+          <strong>必吃亮點：</strong>整隻雞下鍋煮，吃完肉再下刀削麵收尾。
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-3.5 border border-slate-200 shadow-sm space-y-2">
+        <div class="flex items-start justify-between">
+          <div class="flex items-center space-x-2">
+            <span class="text-xl">🥯</span>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">10. 安國站貝果／韓屋咖啡</h4>
+              <p class="text-[11px] text-slate-500">建議時段：D3 午餐（逛完北村、還完韓服）</p>
+            </div>
+          </div>
+          <input type="checkbox" data-food="f10" class="w-5 h-5 rounded text-amber-600 focus:ring-0">
+        </div>
+        <p class="text-xs text-slate-600 bg-slate-50 p-2 rounded-lg leading-relaxed">
+          <strong>推薦：</strong>London Bagel Museum（要用手機 App 登記候位）或 Onion 安國店（韓屋咖啡廳）<br>
+          <strong>交通：</strong>3 號線安國站。<br>
+          <strong>必吃亮點：</strong>首爾最紅的貝果；Onion 開在傳統韓屋裡，拍照很好看。
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-3.5 border border-slate-200 shadow-sm space-y-2">
+        <div class="flex items-start justify-between">
+          <div class="flex items-center space-x-2">
+            <span class="text-xl">🥞</span>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">11. 明洞街頭小吃三寶</h4>
+              <p class="text-[11px] text-slate-500">建議時段：任一晚逛明洞時</p>
+            </div>
+          </div>
+          <input type="checkbox" data-food="f11" class="w-5 h-5 rounded text-amber-600 focus:ring-0">
+        </div>
+        <p class="text-xs text-slate-600 bg-slate-50 p-2 rounded-lg leading-relaxed">
+          <strong>推薦：</strong>辣炒年糕＋魚板串＋黑糖餅（호떡）<br>
+          <strong>交通：</strong>明洞步行街，晚上整排攤販。<br>
+          <strong>必吃亮點：</strong>10 月晚上偏涼，邊走邊吃一個熱糖餅剛剛好。
+        </p>
+      </div>
+
+      <div class="bg-sky-50 border border-sky-200 p-3 rounded-2xl text-[11px] text-sky-900 space-y-1">
+        <p class="font-bold">💡 點餐小知識</p>
+        <p>・烤肉、炒雞、一隻雞常要「至少點 2 人份」，你們兩人剛好。</p>
+        <p>・熱門店可先下載「Catchtable」或「Tabling」App，用手機候位不用站著排。</p>
+      </div>
+    </section>
+
+    <!-- TAB 4: TOOLS & EMERGENCY -->
+    <section id="section-tools" class="space-y-3 hidden">
+      <!-- Hotel Taxi Card -->
+      <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm space-y-2 text-xs">
+        <div class="flex justify-between items-center border-b pb-2">
+          <h4 class="font-bold text-slate-900 text-sm">飯店司機指字卡 (計程車專用)</h4>
+          <button onclick="copyText('서울 중구 창경궁로1길 14 / 충무로역 8번 출구에서 도보 약 5분 / INN-The City Seoul Chungmuro')" class="text-indigo-600 font-bold flex items-center gap-1">
+            <i data-lucide="copy" class="w-3.5 h-3.5"></i> 複製地址
+          </button>
+        </div>
+        <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-100 font-mono space-y-1">
+          <div class="text-slate-900 font-bold text-sm">INN-The City Seoul Chungmuro</div>
+          <div class="text-slate-800 text-sm font-bold">서울 중구 창경궁로1길 14</div>
+          <div class="text-slate-500 text-[11px]">14 Changgyeonggung-ro 1-gil, Jung-gu, Seoul</div>
+          <div class="text-slate-800 text-sm font-bold">충무로역 8번 출구에서 도보 약 5분</div>
+          <div class="text-indigo-600 text-[11px] font-sans font-medium">地鐵忠武路站 8 號出口，步行約 4～6 分鐘</div>
+          <div class="pt-1 font-sans"><a href="https://map.naver.com/p/search/%EC%9D%B8%EB%8D%94%EC%8B%9C%ED%8B%B0%20%EC%84%9C%EC%9A%B8%20%EC%B6%A9%EB%AC%B4%EB%A1%9C" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>在 Naver 地圖開啟飯店</a></div>
+        </div>
+      </div>
+
+      <!-- Useful Phrases -->
+      <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm space-y-2 text-xs">
+        <h4 class="font-bold text-slate-900 text-sm border-b pb-2 flex items-center gap-1.5">
+          <i data-lucide="message-circle" class="w-4 h-4 text-sky-600"></i> 實用指字小卡 (點選直接出示)
+        </h4>
+        <div class="grid grid-cols-2 gap-2 text-center">
+          <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">
+            <div class="text-slate-500 text-[11px]">請借過一下</div>
+            <div class="font-bold text-slate-900 text-sm mt-0.5">잠시만요</div>
+            <div class="text-slate-400 text-[10px]">jam-si-man-yo</div>
+          </div>
+          <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">
+            <div class="text-slate-500 text-[11px]">請幫我退稅</div>
+            <div class="font-bold text-slate-900 text-sm mt-0.5">택스 리펀드 해주세요</div>
+            <div class="text-slate-400 text-[10px]">Tax refund please</div>
+          </div>
+          <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">
+            <div class="text-slate-500 text-[11px]">請給我收據</div>
+            <div class="font-bold text-slate-900 text-sm mt-0.5">영수증 주세요</div>
+            <div class="text-slate-400 text-[10px]">yeong-su-jeung ju-se-yo</div>
+          </div>
+          <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-200">
+            <div class="text-slate-500 text-[11px]">洗手間在哪裡？</div>
+            <div class="font-bold text-slate-900 text-sm mt-0.5">화장실 어디예요?</div>
+            <div class="text-slate-400 text-[10px]">hwa-jang-sil eo-di-ye-yo?</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Restrooms -->
+      <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm space-y-2 text-xs">
+        <h4 class="font-bold text-slate-900 text-sm border-b pb-2 flex items-center gap-1.5">
+          <i data-lucide="bath" class="w-4 h-4 text-sky-600"></i> 找廁所小抄
+        </h4>
+        <p class="text-slate-600">・<strong>地鐵站</strong>都有免費廁所，通常在剪票口內或外，看「화장실」指標。</p>
+        <p class="text-slate-600">・<strong>百貨公司、大型咖啡廳、Olive Young 大樓</strong>的廁所最乾淨。</p>
+        <p class="text-slate-600">・韓國現在大多可以直接把衛生紙丟馬桶沖掉，身上還是帶一包面紙。</p>
+        <p class="text-slate-600">・找附近廁所：Naver 地圖搜尋「<strong>화장실</strong>」或「<strong>공중화장실</strong>」（公共廁所）。</p>
+        <div class="flex flex-wrap gap-1.5 pt-1"><a href="https://map.naver.com/p/search/%EA%B3%B5%EC%A4%91%ED%99%94%EC%9E%A5%EC%8B%A4" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>搜尋附近公共廁所</a><a href="https://www.instagram.com/reel/DKwfMoSTGv_/" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-pink-50 text-pink-700 border border-pink-200 text-[11px] font-semibold">📌 我收藏的公廁 Reel</a></div>
+      </div>
+
+      <!-- Emergency Contacts -->
+      <div class="bg-white p-4 rounded-2xl border border-rose-200 shadow-sm space-y-2 text-xs">
+        <h4 class="font-bold text-slate-900 text-sm border-b pb-2 flex items-center gap-1.5">
+          <i data-lucide="siren" class="w-4 h-4 text-rose-600"></i> 緊急聯絡（點號碼直接撥打）
+        </h4>
+        <div class="grid grid-cols-3 gap-2 text-center">
+          <a href="tel:1330" class="p-2.5 bg-slate-50 rounded-xl border border-slate-200 block">
+            <div class="font-bold text-indigo-700 text-base font-mono">1330</div>
+            <div class="text-slate-500 text-[10px]">觀光諮詢 24h<br>可講中文</div>
+          </a>
+          <a href="tel:112" class="p-2.5 bg-slate-50 rounded-xl border border-slate-200 block">
+            <div class="font-bold text-rose-600 text-base font-mono">112</div>
+            <div class="text-slate-500 text-[10px]">報警</div>
+          </a>
+          <a href="tel:119" class="p-2.5 bg-slate-50 rounded-xl border border-slate-200 block">
+            <div class="font-bold text-rose-600 text-base font-mono">119</div>
+            <div class="text-slate-500 text-[10px]">救護車／火警</div>
+          </a>
+        </div>
+        <p class="text-[11px] text-slate-500 bg-amber-50 p-2 rounded-lg">📌 駐韓國台北代表部急難電話：請從「外交部領事事務局」官網查詢後存進手機。</p>
+      </div>
+    </section>
+
+    <!-- TAB: SHOPPING -->
+    <section id="section-shop" class="space-y-3 hidden">
+      <div class="bg-gradient-to-r from-pink-500 to-violet-500 p-4 rounded-2xl text-white shadow-sm space-y-2">
+        <h3 class="font-bold text-sm flex items-center gap-1.5"><i data-lucide="shopping-bag" class="w-4 h-4"></i> 首爾必買清單</h3>
+        <p class="text-xs text-pink-50">買到就打勾，記錄會存在這支手機上。</p>
+        <div class="w-full bg-white/25 rounded-full h-2 overflow-hidden"><div id="shop-bar" class="bg-white h-2 rounded-full transition-all" style="width:0%"></div></div>
+        <p id="shop-text" class="text-[11px] text-pink-50 font-mono">0 / 0</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-2.5">
+        <div class="border-b pb-2">
+          <h3 class="text-sm font-bold text-slate-900 flex items-center gap-1.5"><i data-lucide="sparkles" class="w-4 h-4 text-pink-500"></i> Olive Young 美妝保養</h3>
+          <p class="text-[11px] text-slate-500 mt-0.5">📍 D1 明洞 Town 旗艦店（營業至 22:30），各區都有分店</p>
+          <div class="flex flex-wrap gap-1.5 pt-1.5"><a href="https://map.naver.com/p/search/%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81%20%EB%AA%85%EB%8F%99%ED%83%80%EC%9A%B4" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>Olive Young 明洞 Town</a></div>
+        </div>
+        <div class="space-y-1.5 text-xs">
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b1" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">面膜（Mediheal 美迪惠爾、Abib 阿彼芙）</div>
+              <div class="text-[11px] text-slate-500">最好分送的伴手禮，常有 1+1 或多片優惠組。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b2" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">防曬（Round Lab 樺樹、朝鮮美女米防曬）</div>
+              <div class="text-[11px] text-slate-500">韓國防曬質地清爽，台灣買價差明顯。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b3" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">化妝水／精華（Anua 魚腥草、Torriden 玻尿酸、COSRX 蝸牛）</div>
+              <div class="text-[11px] text-slate-500">人氣保養三寶，敏感肌先挑小容量試。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b4" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">修護乳霜（Aestura 愛思特羅 365 乳霜）</div>
+              <div class="text-[11px] text-slate-500">乾燥、換季泛紅時救急用。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b5" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">唇彩（rom&nd、peripera）</div>
+              <div class="text-[11px] text-slate-500">韓系唇釉，顏色多、價格親民，送人不出錯。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b6" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">卸妝油（魔女工坊 Ma:nyo）</div>
+              <div class="text-[11px] text-slate-500">經典款，用量大可買大瓶。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b7" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">頭髮護理（Moremo 修護、呂 Ryo 洗髮精）</div>
+              <div class="text-[11px] text-slate-500">染燙髮適用，洗髮精很重，算進託運重量。</div>
+            </div>
+          </label>
+        </div>
+        <p class="text-[11px] text-amber-800 bg-amber-50 p-2 rounded-lg">💡 看價格標籤上的「1+1」「2+1」黃色貼紙最划算；結帳說「택스 리펀드」並出示護照，滿 15,000 韓元可現場退稅。</p>
+      </div>
+      <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-2.5">
+        <div class="border-b pb-2">
+          <h3 class="text-sm font-bold text-slate-900 flex items-center gap-1.5"><i data-lucide="cookie" class="w-4 h-4 text-amber-600"></i> 超市零食・伴手禮</h3>
+          <p class="text-[11px] text-slate-500 mt-0.5">📍 D5 首爾站樂天超市（現場有免費紙箱膠帶），便利商店也有</p>
+          <div class="flex flex-wrap gap-1.5 pt-1.5"><a href="https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EB%A7%88%ED%8A%B8%20%EC%84%9C%EC%9A%B8%EC%97%AD%EC%A0%90" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>樂天超市首爾站</a></div>
+        </div>
+        <div class="space-y-1.5 text-xs">
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b8" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">HBAF 蜂蜜奶油杏仁</div>
+              <div class="text-[11px] text-slate-500">口味超多，小包裝適合分送。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b9" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">韓國海苔／海苔酥</div>
+              <div class="text-[11px] text-slate-500">輕、便宜、大家都愛，最佳辦公室伴手禮。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b10" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">烏龜玉米脆片（꼬북칩）、蜂蜜奶油洋芋片</div>
+              <div class="text-[11px] text-slate-500">韓國人氣零食，台灣買得到但口味少。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b11" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">好麗友巧克力派、Market O 布朗尼</div>
+              <div class="text-[11px] text-slate-500">盒裝好帶，送長輩小孩都合適。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b12" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">Maxim 摩卡咖啡隨身包</div>
+              <div class="text-[11px] text-slate-500">韓國國民即溶咖啡，量販包很便宜。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b13" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">韓國柚子茶（玻璃罐）</div>
+              <div class="text-[11px] text-slate-500">很重又是玻璃，要包好放託運。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b14" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">韓國辣椒醬（고추장）</div>
+              <div class="text-[11px] text-slate-500">醬料是液體，一定要放託運行李。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b26" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">醃魷魚（오징어젓갈）</div>
+              <div class="text-[11px] text-slate-500">D5 樂天超市冷藏區買，回飯店冰冰箱。請店員「<strong>진공포장 해 주세요</strong>」（請幫我真空包裝），再套兩層夾鏈袋放託運；D6 用保冷袋＋冰寶帶回，到家馬上冰。</div>
+            </div>
+          </label>
+        </div>
+        <p class="text-[11px] text-amber-800 bg-amber-50 p-2 rounded-lg">🚫 <strong>泡麵、調理包先看成分表</strong>：有豬肉（돼지고기）、牛肉（소고기）或肉萃取物就別買，帶回台灣初犯罰 20 萬。香蕉牛奶在當地喝就好。</p>
+      </div>
+      <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-2.5">
+        <div class="border-b pb-2">
+          <h3 class="text-sm font-bold text-slate-900 flex items-center gap-1.5"><i data-lucide="pen-tool" class="w-4 h-4 text-sky-600"></i> 生活小物・文具</h3>
+          <p class="text-[11px] text-slate-500 mt-0.5">📍 明洞 Daiso 大創（多層大型店）、弘大 Kakao Friends、市場攤位</p>
+          <div class="flex flex-wrap gap-1.5 pt-1.5"><a href="https://map.naver.com/p/search/%EB%8B%A4%EC%9D%B4%EC%86%8C%20%EB%AA%85%EB%8F%99%EC%97%AD%EC%A0%90" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>Daiso 明洞</a><a href="https://map.naver.com/p/search/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%94%84%EB%A0%8C%EC%A6%88%20%ED%99%8D%EB%8C%80%ED%94%8C%EB%9E%98%EA%B7%B8%EC%8B%AD%EC%8A%A4%ED%86%A0%EC%96%B4" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>Kakao Friends 弘大</a></div>
+        </div>
+        <div class="space-y-1.5 text-xs">
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b15" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">Daiso 大創明洞站店（12 層樓）</div>
+              <div class="text-[11px] text-slate-500">D1 晚上。搭電梯直上頂樓再一層層往下逛，收納、廚房、旅行小物都比台灣多。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b16" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">Kakao Friends／LINE Friends 周邊</div>
+              <div class="text-[11px] text-slate-500">萊恩、春植等角色商品，弘大有大型店。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b17" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">韓國造型襪子</div>
+              <div class="text-[11px] text-slate-500">明洞路邊攤常見「幾雙一萬韓元」，送人很討喜。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b18" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">韓式不鏽鋼扁筷＋長湯匙</div>
+              <div class="text-[11px] text-slate-500">廣藏市場、南大門找得到，實用又有韓國感。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b19" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">人生四格拍貼</div>
+              <div class="text-[11px] text-slate-500">D4 弘大，免費的回憶伴手禮。</div>
+            </div>
+          </label>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-2.5">
+        <div class="border-b pb-2">
+          <h3 class="text-sm font-bold text-slate-900 flex items-center gap-1.5"><i data-lucide="building-2" class="w-4 h-4 text-violet-600"></i> 百貨・免稅・設計品牌</h3>
+          <p class="text-[11px] text-slate-500 mt-0.5">📍 明洞樂天百貨本店（含樂天免稅店）、新世界百貨本店、D5 聖水洞</p>
+          <div class="flex flex-wrap gap-1.5 pt-1.5"><a href="https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EB%B0%B1%ED%99%94%EC%A0%90%20%EB%B3%B8%EC%A0%90" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>樂天百貨本店</a><a href="https://map.naver.com/p/search/%EC%8B%A0%EC%84%B8%EA%B3%84%EB%B0%B1%ED%99%94%EC%A0%90%20%EB%B3%B8%EC%A0%90" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>新世界百貨本店</a><a href="https://map.naver.com/p/search/%EC%A0%A0%ED%8B%80%EB%AA%AC%EC%8A%A4%ED%84%B0%20%ED%95%98%EC%9A%B0%EC%8A%A4%20%EB%85%B8%EC%9B%A8%EC%96%B4%20%EC%84%B1%EC%88%98" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"><span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>Gentle Monster 聖水</a></div>
+        </div>
+        <div class="space-y-1.5 text-xs">
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b20" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">樂天百貨本店＋樂天免稅店</div>
+              <div class="text-[11px] text-slate-500">乙支路入口站直通，名牌、韓國設計品牌一次逛完。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b21" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">先去「外國人服務台」問優惠</div>
+              <div class="text-[11px] text-slate-500">出示護照，詢問外國旅客折扣券或贈品，通常有。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b22" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">正官庄紅蔘</div>
+              <div class="text-[11px] text-slate-500">送長輩首選，百貨與免稅店都有，免稅店常較便宜。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b23" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">Tamburins／Nonfiction 香氛</div>
+              <div class="text-[11px] text-slate-500">D5 聖水洞，韓國小眾香氛，包裝很適合送禮。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b24" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">Gentle Monster 墨鏡／眼鏡</div>
+              <div class="text-[11px] text-slate-500">D5 聖水洞旗艦店本身就是展覽空間，值得逛。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b27" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">EPT 球鞋</div>
+              <div class="text-[11px] text-slate-500">D1 明洞或 D5 聖水（出發前用 Naver 確認門市）。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b28" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">Verish</div>
+              <div class="text-[11px] text-slate-500">D5 聖水（出發前用 Naver 確認門市）。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b29" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">Newmix</div>
+              <div class="text-[11px] text-slate-500">D5 聖水（出發前用 Naver 確認門市）。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b30" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">京東市場乾貨（紅棗、蜂蜜、人蔘片）</div>
+              <div class="text-[11px] text-slate-500">D2 早上，比觀光區便宜；注意託運重量。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b32" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">유성약국（廣藏藥局）藥妝</div>
+              <div class="text-[11px] text-slate-500">D3 廣藏市場旁。地址：종로구 동호로 408 1층；營業 08:00-19:00。</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b31" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">오프약국 藥妝（淡斑霜、維他命、益生菌）</div>
+              <div class="text-[11px] text-slate-500">D4 弘大。網友比價最便宜，現場退稅。地址：마포구 와우산로23길 41 1층 101호</div>
+            </div>
+          </label>
+          <label class="flex items-start space-x-2.5 p-1.5 rounded-lg hover:bg-slate-50 cursor-pointer">
+            <input type="checkbox" data-buy="b25" class="mt-0.5 w-4 h-4 rounded text-pink-600 focus:ring-0">
+            <div>
+              <div class="font-semibold text-slate-800">韓國服飾（Mardi Mercredi、MLB Korea 等）</div>
+              <div class="text-[11px] text-slate-500">小雛菊 T 恤、韓國限定款，百貨或聖水、弘大都有。</div>
+            </div>
+          </label>
+        </div>
+        <p class="text-[11px] text-amber-800 bg-amber-50 p-2 rounded-lg">✈️ 市區免稅店買的東西是「回國當天在機場領」：結帳要給護照＋回程航班，D6 到機場後記得先去提貨櫃台，抓 20~30 分鐘。</p>
+      </div>
+
+      <div class="bg-rose-50 border border-rose-200 p-4 rounded-2xl text-[11px] text-rose-900 space-y-1.5">
+        <p class="font-bold text-xs flex items-center gap-1"><i data-lucide="shield-alert" class="w-4 h-4"></i> 帶回台灣前必看</p>
+        <p>・<strong>免稅額度</strong>：每人回台灣入境，物品總值約 <strong>台幣 35,000 元</strong>以內免稅，超過要走紅線申報。</p>
+        <p>・<strong>酒</strong>：滿 18 歲每人可免稅帶 1 公升。</p>
+        <p>・<strong>液體</strong>：保養品、醬料、柚子茶超過 100ml 一律放託運。</p>
+        <p>・<strong>肉製品</strong>：豬、牛、雞等肉製品完全不要帶，罰款很重（醃魷魚等海鮮不在此限）。</p>
+        <p>・<strong>重量</strong>：每人託運 15KG，邊買邊注意，超重先上網加購。</p>
+      </div>
+    </section>
+
+    <!-- TAB 5: FX -->
+    <section id="section-fx" class="space-y-3 hidden">
+      <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+        <div class="flex items-center justify-between">
+          <h3 class="text-sm font-bold text-slate-900 flex items-center gap-1.5">
+            <i data-lucide="calculator" class="w-4 h-4 text-emerald-600"></i> 韓元 ➔ 台幣
+          </h3>
+          <button onclick="loadRate(true)" class="text-[11px] text-indigo-600 font-semibold flex items-center gap-1">
+            <i data-lucide="refresh-cw" class="w-3 h-3"></i> 更新匯率
+          </button>
+        </div>
+        <div>
+          <label for="fx-krw" class="text-[11px] text-slate-500 font-medium">輸入韓元金額（₩）</label>
+          <input type="number" inputmode="decimal" id="fx-krw" placeholder="例如：35000" oninput="fxCalc()"
+            class="w-full mt-1 p-3 bg-slate-50 border border-slate-200 rounded-xl text-2xl font-bold font-mono text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 select-text">
+        </div>
+        <div class="bg-indigo-600 text-white rounded-xl p-4 text-center">
+          <div class="text-[11px] text-indigo-100">約合台幣</div>
+          <div id="fx-twd" class="text-3xl font-bold font-mono mt-0.5">NT$ 0</div>
+        </div>
+        <div class="grid grid-cols-4 gap-1.5 text-[11px] font-semibold">
+          <button onclick="fxQuick(5000)" class="py-2 bg-slate-100 rounded-lg">5千</button>
+          <button onclick="fxQuick(10000)" class="py-2 bg-slate-100 rounded-lg">1萬</button>
+          <button onclick="fxQuick(50000)" class="py-2 bg-slate-100 rounded-lg">5萬</button>
+          <button onclick="fxQuick(100000)" class="py-2 bg-slate-100 rounded-lg">10萬</button>
+        </div>
+        <div id="fx-status" class="text-[11px] text-slate-500 bg-slate-50 p-2 rounded-lg leading-relaxed">匯率載入中…</div>
+      </div>
+
+      <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm space-y-2 text-xs">
+        <h4 class="font-bold text-slate-900 text-sm">常見價格速查</h4>
+        <div id="fx-table" class="grid grid-cols-2 gap-1.5 font-mono text-[12px]"></div>
+      </div>
+
+      <details class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm text-xs">
+        <summary class="font-bold text-slate-700 cursor-pointer">沒網路時：手動設定匯率</summary>
+        <div class="mt-2 space-y-2">
+          <p class="text-slate-500">輸入「1 台幣可以換多少韓元」，例如換錢所的牌價。</p>
+          <div class="flex gap-2">
+            <input type="number" inputmode="decimal" id="fx-manual" placeholder="例如 43.5" class="flex-1 p-2 bg-slate-50 border border-slate-200 rounded-lg font-mono select-text">
+            <button onclick="fxSetManual()" class="px-3 bg-indigo-600 text-white rounded-lg font-semibold">套用</button>
+          </div>
+        </div>
+      </details>
+    </section>
+
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-16 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs px-4 py-2 rounded-full shadow-lg opacity-0 transition-opacity duration-300 pointer-events-none z-50">
+    已複製到剪貼簿！
+  </div>
+
+  <script>
+    function switchTab(tab) {
+      const sections = ['itinerary', 'checklist', 'food', 'shop', 'fx', 'tools'];
+      sections.forEach(s => {
+        document.getElementById(`section-${s}`).classList.add('hidden');
+        const btn = document.getElementById(`nav-${s}`);
+        btn.classList.remove('tab-active');
+        btn.classList.add('text-slate-600');
+      });
+
+      document.getElementById(`section-${tab}`).classList.remove('hidden');
+      const activeBtn = document.getElementById(`nav-${tab}`);
+      activeBtn.classList.add('tab-active');
+      activeBtn.classList.remove('text-slate-600');
+    }
+
+    function selectDay(dayNum) {
+      document.querySelectorAll('.day-panel').forEach(panel => panel.classList.add('hidden'));
+      document.querySelectorAll('.day-btn').forEach(btn => {
+        btn.className = "day-btn px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-white text-slate-700 border border-slate-200";
+      });
+
+      document.getElementById(`day-content-${dayNum}`).classList.remove('hidden');
+      const activeBtn = document.getElementById(`daybtn-${dayNum}`);
+      activeBtn.className = "day-btn px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap day-pill-active";
+    }
+
+    // ===== 即時匯率 =====
+    // krwPerTwd = 1 台幣可換多少韓元
+    let krwPerTwd = 42.5;
+    const FX_KEY = 'seoul_trip_fx_v1';
+    const fmt = n => Math.round(n).toLocaleString('zh-TW');
+
+    function fxSave(obj) { try { localStorage.setItem(FX_KEY, JSON.stringify(obj)); } catch (e) {} }
+    function fxLoadSaved() { try { return JSON.parse(localStorage.getItem(FX_KEY) || 'null'); } catch (e) { return null; } }
+
+    function fxStatus(html) { document.getElementById('fx-status').innerHTML = html; }
+
+    function fxCalc() {
+      const krw = parseFloat(document.getElementById('fx-krw').value) || 0;
+      document.getElementById('fx-twd').textContent = 'NT$ ' + fmt(krw / krwPerTwd);
+    }
+    function fxQuick(n) { document.getElementById('fx-krw').value = n; fxCalc(); }
+
+    function fxTable() {
+      const items = [[1000,'便利商店飲料'],[5000,'街頭小吃'],[15000,'退稅門檻'],[17000,'機場巴士'],[30000,'一餐'],[100000,'購物']];
+      document.getElementById('fx-table').innerHTML = items.map(([k,l]) =>
+        `<div class="bg-slate-50 rounded-lg p-2"><div class="text-[10px] text-slate-400 font-sans">${l}</div>₩${fmt(k)} ≈ <b class="text-indigo-700">NT$${fmt(k/krwPerTwd)}</b></div>`).join('');
+    }
+
+    function fxApply(rate, label) {
+      krwPerTwd = rate;
+      fxCalc(); fxTable();
+      fxStatus(`1 台幣 ≈ <b class="font-mono text-slate-800">${rate.toFixed(2)}</b> 韓元　·　${label}<br><span class="text-slate-400">參考用的市場中間價，換錢所與刷卡實際匯率會略有差異。</span>`);
+    }
+
+    async function fetchJSON(url) {
+      const ctrl = new AbortController();
+      const t = setTimeout(() => ctrl.abort(), 8000);
+      try {
+        const r = await fetch(url, { signal: ctrl.signal, cache: 'no-store' });
+        if (!r.ok) throw new Error(r.status);
+        return await r.json();
+      } finally { clearTimeout(t); }
+    }
+
+    async function loadRate(manualClick) {
+      if (manualClick) fxStatus('匯率更新中…');
+      const sources = [
+        async () => { const d = await fetchJSON('https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/twd.json'); return { rate: d.twd.krw, date: d.date }; },
+        async () => { const d = await fetchJSON('https://latest.currency-api.pages.dev/v1/currencies/twd.json'); return { rate: d.twd.krw, date: d.date }; },
+        async () => { const d = await fetchJSON('https://open.er-api.com/v6/latest/TWD'); return { rate: d.rates.KRW, date: (d.time_last_update_utc || '').slice(5, 16) }; },
+      ];
+      for (const src of sources) {
+        try {
+          const { rate, date } = await src();
+          if (rate > 10 && rate < 100) {
+            const now = new Date();
+            const when = `${now.getMonth()+1}/${now.getDate()} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
+            fxSave({ rate, when, date, manual: false });
+            fxApply(rate, `✅ 即時匯率（${when} 更新）`);
+            return;
+          }
+        } catch (e) {}
+      }
+      const saved = fxLoadSaved();
+      if (saved && saved.rate) fxApply(saved.rate, `⚠️ 目前連不上，使用上次${saved.manual ? '手動設定' : '更新'}的匯率（${saved.when}）`);
+      else fxApply(42.5, '⚠️ 目前連不上，先用預設約略匯率，可在下方手動設定');
+    }
+
+    function fxSetManual() {
+      const v = parseFloat(document.getElementById('fx-manual').value);
+      if (!(v > 10 && v < 100)) { alert('請輸入 10～100 之間的數字，例如 43.5'); return; }
+      const now = new Date();
+      const when = `${now.getMonth()+1}/${now.getDate()}`;
+      fxSave({ rate: v, when, manual: true });
+      fxApply(v, `✍️ 手動設定（${when}）`);
+    }
+
+    function copyText(text) {
+      const temp = document.createElement('textarea');
+      temp.value = text;
+      document.body.appendChild(temp);
+      temp.select();
+      document.execCommand('copy');
+      document.body.removeChild(temp);
+      
+      const toast = document.getElementById('toast');
+      toast.classList.remove('opacity-0');
+      setTimeout(() => {
+        toast.classList.add('opacity-0');
+      }, 2000);
+    }
+
+    function initChecklist() {
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      checkboxes.forEach(cb => {
+        const id = cb.getAttribute('data-check') || cb.getAttribute('data-food') || cb.getAttribute('data-buy');
+        if (id) {
+          let saved = null; try { saved = localStorage.getItem(`seoul_trip_v2_${id}`); } catch (e) {}
+          if (saved === 'true') {
+            cb.checked = true;
+          }
+          cb.addEventListener('change', () => {
+            try { localStorage.setItem(`seoul_trip_v2_${id}`, cb.checked); } catch (e) {}
+            updateProgress();
+          });
+        }
+      });
+      updateProgress();
+    }
+
+    function updateProgress() {
+      const checkItems = document.querySelectorAll('input[data-check]');
+      let checkedCount = 0;
+      checkItems.forEach(cb => {
+        if (cb.checked) checkedCount++;
+      });
+      const pct = Math.round((checkedCount / checkItems.length) * 100);
+      const bar = document.getElementById('checklist-progress-bar');
+      const txt = document.getElementById('checklist-progress-text');
+      if (bar && txt) {
+        bar.style.width = pct + '%';
+        txt.innerText = pct + '%';
+      }
+      const buys = document.querySelectorAll('input[data-buy]');
+      const got = [...buys].filter(b => b.checked).length;
+      const sb = document.getElementById('shop-bar'), st = document.getElementById('shop-text');
+      if (sb && st) { sb.style.width = (buys.length ? got / buys.length * 100 : 0) + '%'; st.textContent = `已買 ${got} / ${buys.length} 項`; }
+    }
+
+    // ===== Naver Map 快捷鍵 =====
+    const HOTEL = ['飯店', '인더시티 서울 충무로'];
+    const MAP_PINS = {
+      'section-food': [[['匠人辣炒雞','장인닭갈비 명동점']], [['烏達里家','오다리집 명동']], [['富村生牛肉','부촌육회'],['廣藏市場','광장시장']], [['橋村炸雞','교촌치킨 동대문']], [['馬場洞畜產市場','마장축산물시장']],
+        [['獎忠洞豬腳街','장충동 족발골목'],['平安道豬腳','평안도족발집']], [['又來屋','우래옥']], [['廣藏市場','광장시장']], [['陳玉華一隻雞','진옥화할매원조닭한마리']], [['London Bagel Museum','런던베이글뮤지엄 안국점'],['Onion 安國','어니언 안국']], [['明洞步行街','명동거리']]],
+    };
+    const naverUrl = q => 'https://map.naver.com/p/search/' + encodeURIComponent(q);
+    function pinRow(pins) {
+      const row = document.createElement('div');
+      row.className = 'flex flex-wrap gap-1.5 pt-1';
+      pins.forEach(([label, q]) => {
+        const a = document.createElement('a');
+        a.href = naverUrl(q); a.target = '_blank'; a.rel = 'noopener';
+        a.className = 'inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold active:bg-emerald-100';
+        a.innerHTML = '<span class="font-black text-[10px] bg-emerald-500 text-white rounded px-1">N</span>';
+        a.appendChild(document.createTextNode(label));
+        row.appendChild(a);
+      });
+      return row;
+    }
+    function initMapPins() {
+      Object.entries(MAP_PINS).forEach(([id, list]) => {
+        const sel = id === 'section-food' ? '.bg-white.rounded-2xl.p-3\\.5' : '.relative.flex > .bg-white';
+        const cards = document.querySelectorAll(`#${id} ${sel}`);
+        list.forEach((pins, i) => { if (cards[i]) cards[i].appendChild(pinRow(pins)); });
+      });
+    }
+
+    window.onload = function() {
+      initMapPins();
+      lucide.createIcons();
+      initChecklist();
+      const saved = fxLoadSaved();
+      if (saved && saved.rate) fxApply(saved.rate, `上次更新：${saved.when}，正在抓最新匯率…`); else fxTable();
+      loadRate(false);
+    };
+  </script>
+</body>
+</html>
