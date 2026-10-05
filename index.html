@@ -2,7 +2,7 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>首爾自由行手冊</title>
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -41,6 +41,38 @@
     .tab-active { background: #4f46e5; color: #ffffff; box-shadow: 0 4px 14px rgba(79, 70, 229, 0.3); }
     .day-pill-active { background: #4f46e5; color: #ffffff; box-shadow: 0 2px 8px rgba(79, 70, 229, 0.25); }
     input[type="checkbox"]:checked + div { text-decoration-color: #4f46e5; }
+
+    /* ===== 響應式：字放大、版面依螢幕寬度展開 ===== */
+    html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+    @media (min-width: 768px)  { html { font-size: 17px; } }
+    @media (min-width: 1200px) { html { font-size: 18px; } }
+    html body .text-\[9px\]  { font-size: .6875rem !important; }
+    html body .text-\[10px\] { font-size: .75rem !important; }
+    html body .text-\[11px\] { font-size: .8125rem !important; line-height: 1.45; }
+    html body .text-xs  { font-size: .875rem !important; line-height: 1.55 !important; }
+    html body .text-sm  { font-size: .9375rem !important; line-height: 1.45 !important; }
+    html body .text-base{ font-size: 1.0625rem !important; }
+    /* 版面寬度 */
+    @media (min-width: 768px) {
+      html body .max-w-md { max-width: 44rem !important; }
+      html body main { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+      #section-itinerary > .flex { flex-wrap: wrap; overflow: visible; row-gap: .4rem; }
+    }
+    @media (min-width: 1100px) {
+      html body .max-w-md { max-width: 64rem !important; }
+      /* 清單類頁面：兩欄排列 */
+      #section-checklist, #section-food, #section-shop, #section-tools { column-count: 2; column-gap: 1rem; }
+      #section-checklist > *, #section-food > *, #section-shop > *, #section-tools > * { break-inside: avoid; margin-top: 0 !important; margin-bottom: .75rem; }
+      #section-checklist:not(.hidden), #section-food:not(.hidden), #section-shop:not(.hidden), #section-tools:not(.hidden) { display: block; }
+      #section-checklist > :first-child, #section-food > :first-child, #section-shop > :first-child { column-span: all; }
+      /* 行程卡片：兩欄 */
+      .day-panel > .space-y-3 { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+      .day-panel > .space-y-3 > * { margin-top: 0 !important; }
+      .day-panel > .space-y-3::before { display: none; }
+      .day-panel > .space-y-3 > .relative { padding-left: 0; }
+      .day-panel > .space-y-3 > .relative > .absolute { display: none; }
+      .day-panel > .space-y-3 > .relative > div { height: 100%; }
+    }
   </style>
 </head>
 <body class="bg-slate-100 text-slate-800 antialiased pb-28 select-none">
@@ -76,7 +108,7 @@
           <span class="text-[10px] tracking-wider uppercase bg-white/20 px-2 py-0.5 rounded text-white font-mono">Jin Air 真航空 · 中型 737-800</span>
           <h2 class="text-lg font-bold mt-1">台中 RMQ ⇄ 首爾仁川 ICN T2</h2>
         </div>
-        <span class="text-xs bg-rose-500 text-white font-bold px-2 py-1 rounded-lg shadow-sm">含15KG託運</span>
+        <span class="text-xs bg-rose-500 text-white font-bold px-2 py-1 rounded-lg shadow-sm whitespace-nowrap shrink-0">含15KG託運</span>
       </div>
 
       <!-- Flight Times -->
@@ -109,7 +141,7 @@
             <div class="text-[11px] text-slate-300">忠武路站 3/4 號線交會 · 24㎡ 有窗大床房</div>
           </div>
         </div>
-        <button onclick="switchTab('tools')" class="text-[11px] bg-white text-indigo-900 font-bold px-2 py-1 rounded-md hover:bg-slate-100 transition-colors">
+        <button onclick="switchTab('tools')" class="text-[11px] bg-white text-indigo-900 font-bold px-2 py-1 rounded-md hover:bg-slate-100 transition-colors whitespace-nowrap shrink-0">
           司機卡
         </button>
       </div>
